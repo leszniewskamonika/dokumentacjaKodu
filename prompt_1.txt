@@ -309,15 +309,19 @@ Usage:
 
 Response:
 """
-A class that defines a binary search tree node used for booking appointments in a calendar. The node has a start and end time for the appointment, and left and right pointers for child nodes. 
-
-The MyCalendar class creates a root node upon initialization and provides a book method to insert new nodes into the binary search tree. The book method checks if the root node is empty and creates a new node if necessary, otherwise it calls the insert method of the root node to insert a new node into the binary search tree. 
-
-Usage: 
-
-   node = Node(10, 20)  # create a node with start time 10 and end time 20
-   cal = MyCalendar()  # create a new calendar
-   cal.book(5, 15)  # insert a new appointment with start time 5 and end time 15
+A class representing a node in a binary search tree used for booking events in a calendar.
+Attributes:
+- start (int): The start time of the event.
+- end (int): The end time of the event.
+- left (Node): The left child node of the current node.
+- right (Node): The right child node of the current node.
+Methods:
+- insert(node): Inserts a new node into the binary search tree based on the start and end times of the event.
+- book(start, end): Books an event in the calendar by inserting a new node into the binary search tree.
+Example usage:
+calendar = MyCalendar()
+calendar.book(10, 20) # Returns True
+calendar.book(15, 25) # Returns False
 """
 
 ######################################
@@ -389,7 +393,12 @@ Usage:
 Response:
 """
 This class represents a Room with length and breadth attributes, along with a method to calculate the area.
-"""
+
+Attributes:
+length (float): The length of the room.
+breadth (float): The breadth of the room.
+Methods:
+calculate_area(): Calculates the area of the room by multiplying the length and breadth attributes.
 
 class Room:
     length = 0.0
@@ -458,7 +467,7 @@ Usage:
 
 Response:
 """
-The Island class finds the maximum area of an island in a given grid. The maxAreaOfIsland method takes in a 2D list of integers representing the grid and returns an integer representing the maximum area of an island in the grid. This method utilizes depth-first search to explore all adjacent 1s in the grid and mark them as visited by changing their values to 0. The dfs method is a helper function of maxAreaOfIsland that takes in the row and column indices of a cell and returns the area of the island containing that cell. The maximum area found for any island in the grid is returned by maxAreaOfIsland. 
+The Island class represents a grid of islands and provides a method to calculate the maximum area of an island in the grid. The maxAreaOfIsland method takes in a 2D list of integers representing the grid and returns an integer representing the maximum area of an island in the grid. The method uses depth-first search (DFS) to traverse the grid and find the area of each island. The DFS function is defined within the maxAreaOfIsland method and takes in the current row and column indices as parameters. If the current cell is out of bounds or is not part of an island, the function returns 0. Otherwise, the function marks the current cell as visited and recursively calls itself on the neighboring cells. The area of the island is calculated as the sum of all the cells visited during the DFS. The max_area variable is updated with the maximum area found so far. The method returns the max_area variable as the result.
 """
 
 ######################################
@@ -681,12 +690,24 @@ Usage:
 
 Response:
 """
-This module contains a class 'Island' with a method 'maxAreaOfIsland'. This method takes a list of lists 'grid' as its parameter and returns an integer.
-
-The 'maxAreaOfIsland' method uses Depth First Search (DFS) algorithm to calculate the maximum area of an island in a given grid. It initializes two variables 'm' and 'n' with the length of the grid and its first sub-list respectively. It then iterates through the grid using nested for loops to find a starting point with a value of 1. Once it finds a starting point, it applies the DFS algorithm to traverse through the island and returns the size of the island. The maximum island size is stored in the 'max_area' variable and is returned at the end.
-
-'dfs' method is a helper function that takes two integer parameters 'i' and 'j'. It is used to traverse through an island starting from the position indexed by i and j. 'dfs' method returns the size of the island starting with the input index.
-
+This module contains a class Island that implements a method to find the maximum area of an island in a given grid.
+The Island class has one method:
+- maxAreaOfIsland(grid: List[List[int]]) -> int: This method takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
+The maxAreaOfIsland method uses a depth-first search algorithm to traverse the grid and find the area of each island. It returns the maximum area found.
+The dfs function is a helper function that performs the depth-first search. It takes two integer parameters i and j representing the current position in the grid. It returns an integer representing the area of the island starting from the current position.
+The input grid is a 2D list of integers where 0 represents water and 1 represents land.The method assumes that the grid is rectangular and non-empty.
+Example usage:
+island = Island()
+grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+          [0,0,0,0,0,0,0,1,1,1,0,0,0],          
+          [0,1,1,0,1,0,0,0,0,0,0,0,0],            
+          [0,1,0,0,1,1,0,0,1,0,1,0,0],           
+          [0,1,0,0,1,1,0,0,1,1,1,0,0],
+          [0,0,0,0,0,0,0,0,0,0,1,0,0],          
+          [0,0,0,0,0,0,0,1,1,1,0,0,0],            
+          [0,0,0,0,0,0,0,1,1,0,0,0,0]]  
+          max_area = island.maxAreaOfIsland(grid)
+          print(max_area) # Output: 6
 """
 
 ######################################
@@ -1018,22 +1039,25 @@ Usage:
 
 Response:
 """
-This module contains a class Island with a method maxAreaOfIsland that calculates the maximum area of a given island grid. 
-
+This module contains a class Island that has a method maxAreaOfIsland to find the maximum area of an island in a given grid.
+The method maxAreaOfIsland takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
+The function dfs is a helper function that performs depth-first search to find the area of an island starting from a given cell.
 Parameters:
-- grid: A list of lists (2D array) where each element is either 0 or 1 representing water or land respectively.
-
+- grid (List[List[int]]): A 2D list of integers representing the grid.
 Returns:
-An integer representing the maximum area of the island.
-
-The method maxAreaOfIsland uses the depth-first search (dfs) algorithm to traverse the island grid and identify contiguous land areas. 
-
-The function dfs takes two parameters i and j representing the current row and column indices respectively. It returns 0 if the current position is out of bounds or if there's water at that position. Otherwise, it marks the current position as visited (by setting its value to 0) and returns the sum of 1 and the results of recursively calling dfs on the four adjacent cells (up, down, left, and right).
-
-The main method maxAreaOfIsland initializes the variables m and n to the lengths of the grid's rows and columns respectively. It then loops over all cells in the grid and calls dfs on each land cell it encounters, updating the maximum area variable accordingly.
-
-Overall, this algorithm has time complexity O(mn) where m and n are the dimensions of the grid, since every cell is visited once and only once.
-
+- int: The maximum area of an island in the grid.
+Example usage:
+island = Island()
+grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+       [0,0,0,0,0,0,0,1,1,1,0,0,0],
+       [0,1,1,0,1,0,0,0,0,0,0,0,0],
+       [0,1,0,0,1,1,0,0,1,0,1,0,0],
+       [0,1,0,0,1,1,0,0,1,1,1,0,0],
+       [0,0,0,0,0,0,0,0,0,0,1,0,0],
+       [0,0,0,0,0,0,0,1,1,1,0,0,0],
+       [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+        max_area = island.maxAreaOfIsland(grid)
+        print(max_area) # Output: 6"
 """
 
 ######################################
@@ -1492,84 +1516,9 @@ Usage:
 	total_tokens: 649
 
 Response:
-# Documentation for the Node and MyCalendar classes
-class Node:
-    """
-    A class representing a node in a binary search tree.
-
-    Attributes:
-        start (int): The starting time of the event booked.
-        end (int): The ending time of the event booked.
-        left (Node): The left child of the node.
-        right (Node): The right child of the node.
-    """
-
-    def __init__(self, start, end):
-        """
-        Initializes a new Node object.
-
-        Arguments:
-            start (int): The starting time of the event booked.
-            end (int): The ending time of the event booked.
-        """
-        self.start = start
-        self.end = end
-        self.left = None
-        self.right = None
-
-    def insert(self, node):
-        """
-        Inserts a new node into the binary search tree. 
-
-        Arguments:
-            node (Node): The node to be inserted.
-
-        Returns:
-            bool: Returns True if the node can be successfully inserted into the tree, False otherwise.
-        """
-        if node.start >= self.end:
-            if not self.right:
-                self.right = node
-                return True
-            return self.right.insert(node)
-        elif node.end <= self.start:
-            if not self.left:
-                self.left = node
-                return True
-            return self.left.insert(node)
-        else:
-            return False
-
-
-class MyCalendar(object):
-    """
-    A class representing a calendar.
-
-    Attributes:
-        root (Node): The root node of the binary search tree representing the calendar.
-    """
-
-    def __init__(self):
-        """
-        Initializes a new MyCalendar object.
-        """
-        self.root = None
-
-    def book(self, start, end):
-        """
-        Inserts a new event into the calendar.
-
-        Arguments:
-            start (int): The starting time of the event to be booked.
-            end (int): The ending time of the event to be booked.
-
-        Returns:
-            bool: Returns True if the event can be successfully booked in the calendar, False otherwise.
-        """
-        if self.root is None:
-            self.root = Node(start, end)
-            return True
-        return self.root.insert(Node(start, end))
+This file contains a class Node and a class MyCalendar. The Node class represents a node in a binary search tree used to store intervals. The MyCalendar class uses the Node class to implement a calendar that can book intervals. 
+The Node class has an __init__ method that initializes the start and end points of the interval represented by the node, as well as the left and right child nodes. The insert method inserts a new node into the binary search tree based on the start and end points of the new node.
+The MyCalendar class has an __init__ method that initializes the root node of the binary search tree. The book method books a new interval by inserting a new node into the binary search tree using the root node. \n\nThis code is well-documented and easy to understand.
 
 ######################################
 
@@ -1599,26 +1548,9 @@ Usage:
 
 Response:
 """
-This file contains two classes: Person and Student.
-
-Class Person has three instance variables: firstName, lastName, and homeCountry. It also has two methods: printName, which prints the person's first and last name, and printCountry, which prints the person's home country.
-
-Class Student inherits from Person and adds an instance variable, universityName. It also has a method printUniversity, which prints the student's university name.
-
-Usage example:
-    person = Person("John", "Doe", "USA")
-    person.printName()
-    # Output: John Doe
-    person.printCountry()
-    # Output: USA
-    
-    student = Student("Jane", "Smith", "Canada", "University of Toronto")
-    student.printName()
-    # Output: Jane Smith
-    student.printCountry()
-    # Output: Canada
-    student.printUniversity()
-    # Output: University of Toronto
+This file contains two classes: Person and Student. \n\nThe Person class has three attributes: firstName (string), lastName (string), and homeCountry (string). It also has two methods: printName, which prints the person's full name, and printCountry, which prints the person's home country.
+The Student class inherits from the Person class and adds an additional attribute: universityName (string). It also has a method called printUniversity, which prints the student's university name.
+Both classes have an __init__ method that initializes their respective attributes.
 """
 
 ######################################
@@ -1631,13 +1563,9 @@ Usage:
 
 Response:
 """
-This file contains three classes: Customer, IChannel (an abstract class), and its two implementations, Channel and ProxyChannel.
-
-Customer class has an __init__ method that initializes the age of the customer and a get_age method that returns the age.
-
-IChannel is an abstract base class defining an abstract method called 'provide_broadcast'.
-
-Channel class implements the 'provide_broadcast' method of IChannel and prints a message when it starts broadcasting.
-
-ProxyChannel also implements the 'provide_broadcast' method of IChannel. It takes an instance of Customer as an argument during initialization and checks if the customer is above 18 years old. If the customer is above 18 years old, it provides a broadcast through the Channel instance and prints a message stating that the service is registered for billing. If the customer is below 18 years, it prints a message stating that the service is not allowed for customers under the age of 18. 
+This file contains three classes: Customer, IChannel, and ProxyChannel.
+The Customer class has a constructor that takes an age parameter and a method get_age that returns the age of the customer.
+The IChannel class is an abstract base class that defines an abstract method provide_broadcast.
+The Channel class is a concrete implementation of the IChannel class and provides an implementation for the provide_broadcast method.
+The ProxyChannel class is also a concrete implementation of the IChannel class and takes a Customer object as a parameter in its constructor. It checks the age of the customer and if the customer is over 18, it provides the broadcast using the Channel object and prints a message indicating that the service is registered for billing. If the customer is under 18, it prints a message indicating that the service is not allowed for customers under the age of 18.
 """
