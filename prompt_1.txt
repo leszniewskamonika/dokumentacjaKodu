@@ -5,25 +5,18 @@
 Processing file room.py, query 1
 Usage:
 	prompt_tokens: 55
-	completion_tokens: 133
-	total_tokens: 188
+	completion_tokens: 104
+	total_tokens: 159
 
 Response:
 """
-    This module defines a class Room that represents a room with a length and breadth. 
-    
-    Attributes:
-        length (float): The length of the room. Defaults to 0.0.
-        breadth (float): The breadth of the room. Defaults to 0.0.
-        
-    Methods:
-        calculate_area(self): Calculates and prints the area of the room based on the length and breadth attributes. 
-        
-    Example usage:
-        room = Room()
-        room.length = 10.0
-        room.breadth = 5.0
-        room.calculate_area()  # Output: "Area of Room = 50.0"
+This file defines a class Room that represents a room with a given length and breadth. The class has two attributes, length and breadth, both initialized to 0.0. The class also has a method calculate_area() that calculates and prints the area of the room by multiplying its length and breadth. 
+
+Example usage:
+room = Room()
+room.length = 10.0
+room.breadth = 5.0
+room.calculate_area() # Output: Area of Room = 50.0
 """
 
 ######################################
@@ -31,16 +24,12 @@ Response:
 Processing file fibo.py, query 1
 Usage:
 	prompt_tokens: 71
-	completion_tokens: 128
-	total_tokens: 199
+	completion_tokens: 96
+	total_tokens: 167
 
 Response:
 """
-This file contains the implementation of the Fibo class, which provides a method to calculate the nth number in the Fibonacci sequence. 
-
-The fib() method takes an integer n as input and returns the nth number in the Fibonacci sequence. If n is 0 or 1, the method returns the corresponding value directly. If n is greater than 1, the method recursively calls itself with n-1 and n-2 as inputs, and returns the sum of these two values. 
-
-The method has a parameter annotation of type int for the input n, and a return type annotation of type int for the calculated Fibonacci number. 
+This file contains the implementation of the Fibo class which provides a method to calculate the nth Fibonacci number. The fib method takes an integer n as input and returns the nth Fibonacci number. If n is 0, the method returns 0 and if n is 1, the method returns 1. For all other values of n, the method recursively calculates the (n-1)th and (n-2)th Fibonacci numbers and returns their sum. 
 """
 
 ######################################
@@ -48,20 +37,12 @@ The method has a parameter annotation of type int for the input n, and a return 
 Processing file pascal.py, query 1
 Usage:
 	prompt_tokens: 126
-	completion_tokens: 183
-	total_tokens: 309
+	completion_tokens: 75
+	total_tokens: 201
 
 Response:
 """
-This module contains the implementation of a class, Pascal, which provides a method for generating Pascal's triangle up to a specified number of rows.
-
-The Pascal class has a single method, generate(), which takes an integer n as input and returns a list of lists representing Pascal's triangle up to the nth row. Each inner list contains the coefficients of the corresponding row in the triangle, with the first element representing the 0th element in the row.
-
-The algorithm used by the generate method uses dynamic programming to generate the coefficients of each row in the triangle in O(n^2) time complexity.
-
-Example usage:
-pascal = Pascal()
-triangle = pascal.generate(5) # returns [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+This module contains the implementation of the Pascal class, which provides a method to generate a Pascal's triangle of size n. The generate method takes an integer n as input and returns a list of lists of integers representing the Pascal's triangle. Each inner list contains the coefficients of the corresponding row of the triangle. The implementation uses dynamic programming to compute the coefficients efficiently. 
 """
 
 ######################################
@@ -69,18 +50,18 @@ triangle = pascal.generate(5) # returns [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [
 Processing file island.py, query 1
 Usage:
 	prompt_tokens: 193
-	completion_tokens: 243
-	total_tokens: 436
+	completion_tokens: 141
+	total_tokens: 334
 
 Response:
 """
-Defines the Island class and its method maxAreaOfIsland, which takes in a 2D grid of integers and calculates the maximum area of an island within the grid. This is accomplished by performing a depth-first search (DFS) on all indexes of the grid that contain a value of 1, and incrementing a counter for each index visited. The maximum counter value found during the DFS is returned as the maximum area of the island. If an index is not part of the island, the function returns 0.
+This file contains the implementation of the Island class, which provides a method to calculate the maximum area of an island in a given grid. The method takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
 
-The DFS helper function is defined within maxAreaOfIsland and takes in the current row and column index as parameters. If the index is out of bounds or is not part of the island, the function returns 0. Otherwise, the current index value is set to 0 to indicate it has been visited, and the DFS function is recursively called for each adjacent index. The counter is incremented for every successfully visited and marked index.
+The maxAreaOfIsland method uses a depth-first search algorithm to traverse the grid and find the area of each island. It returns the maximum area found.
 
-The max_area variable is used to keep track of the maximum counter value found during the DFS. The function returns this value at the end.
+The dfs function is a helper function that performs the depth-first search. It takes the current position (i, j) as input and returns the area of the island starting from that position.
 
-This implementation requires the List class from the typing module to define the input type hint for the grid variable.
+The Island class requires the List type from the typing module to be imported.
 """
 
 ######################################
@@ -88,15 +69,22 @@ This implementation requires the List class from the typing module to define the
 Processing file calculate.py, query 1
 Usage:
 	prompt_tokens: 231
-	completion_tokens: 48
-	total_tokens: 279
+	completion_tokens: 107
+	total_tokens: 338
 
 Response:
 """
-A class to perform basic arithmetic calculations on a given string expression.
+This file contains the class Calculate which provides methods for performing arithmetic calculations on a given string input.
 
-The class contains methods to update and solve the arithmetic problem expressed as a string.
-The calculate method takes a string input s and returns the calculated result in integer format.
+The methods included in this class are:
+- update: updates the stack based on the sign and number provided
+- solve: solves the arithmetic expression recursively using a stack and returns the result
+- calculate: takes a string input and returns the result of the arithmetic expression
+
+Example usage:
+c = Calculate()
+result = c.calculate("1 + 2 - (3 + 4)")
+print(result) # Output: -4
 """
 
 ######################################
@@ -104,12 +92,12 @@ The calculate method takes a string input s and returns the calculated result in
 Processing file english.py, query 1
 Usage:
 	prompt_tokens: 614
-	completion_tokens: 97
-	total_tokens: 711
+	completion_tokens: 164
+	total_tokens: 778
 
 Response:
 """
-This class provides a method to convert a given integer into its English word form. The method accepts an integer as input and returns the English word representation of the number as a string. The method breaks down the given number into its components - billion, million, thousands and last three digits - and converts each component into its word form using the defined dictionaries for one, two and three digit numbers. The resulting words are concatenated to form the final English word representation of the input number.
+This class provides a method to convert a given integer into its English word representation. The method 'numberToWords' takes an integer as input and returns a string representing the English word equivalent of the input number. The method uses dictionaries to store the English word representation of one-digit, two-digit, and tens places. It also defines two helper functions 'get_three_digit_num' and 'get_two_digit_num' to convert three-digit and two-digit numbers respectively. The method first checks if the input number is zero and returns 'Zero' if it is. It then separates the input number into its billion, million, thousand, and last three-digit components and converts each component to its English word representation using the helper functions. Finally, it concatenates the English word representations of each component and returns the resulting string.
 """
 
 ######################################
@@ -117,35 +105,38 @@ This class provides a method to convert a given integer into its English word fo
 Processing file mycalendar.py, query 1
 Usage:
 	prompt_tokens: 190
-	completion_tokens: 191
-	total_tokens: 381
+	completion_tokens: 123
+	total_tokens: 313
 
 Response:
 """
-The Node class represents a node in a binary tree used to construct a calendar in the MyCalendar class. A node is defined by a start and end time and can have left and right child nodes. 
+A class representing a node in a binary search tree used for booking events in a calendar.
 
-    Attributes:
-    - start: An integer representing the start time of the event.
-    - end: An integer representing the end time of the event.
-    - left: A Node object representing the left child node.
-    - right: A Node object representing the right child node.
+Attributes:
+- start (int): The start time of the event.
+- end (int): The end time of the event.
+- left (Node): The left child node.
+- right (Node): The right child node.
 
-    Methods:
-    - __init__(self, start, end): Initializes a Node object with the given start and end times, and sets left and right child nodes to None.
-    - insert(self, node): Inserts the given node into the appropriate subtree of this node, depending on whether the node's start and end times are less than or greater than this node's start and end times. Returns True if the node was successfully inserted, False otherwise.
+Methods:
+- insert(node): Inserts a new node into the binary search tree.
+- book(start, end): Books an event in the calendar by inserting a new node into the binary search tree.
+
 """
+
+# Note: This documentation comment is for the Node class, not the MyCalendar class.
 
 ######################################
 
 Processing file solution.py, query 1
 Usage:
 	prompt_tokens: 214
-	completion_tokens: 94
-	total_tokens: 308
+	completion_tokens: 86
+	total_tokens: 300
 
 Response:
 """
-This file contains a class Solution that defines a method sortList to sort a linked list in ascending order. It also defines a class ListNode that represents a node in the linked list. The method sortList takes a head of type Optional[ListNode] as input, sorts the linked list and returns the sorted linked list of type Optional[ListNode]. If the input linked list is empty or contains only one node, then the method returns the input linked list as is.
+This file contains a class Solution that implements a sorting algorithm for a linked list. The class takes in a ListNode object as input and returns a sorted ListNode object. The ListNode class is also defined in this file, with each node containing a value and a pointer to the next node. The sorting algorithm used is merge sort, which recursively divides the linked list into halves, sorts them, and then merges them back together. 
 """
 
 ######################################
@@ -153,18 +144,18 @@ This file contains a class Solution that defines a method sortList to sort a lin
 Processing file person.py, query 1
 Usage:
 	prompt_tokens: 133
-	completion_tokens: 107
-	total_tokens: 240
+	completion_tokens: 127
+	total_tokens: 260
 
 Response:
 """
-This file contains the Person and Student classes.
+This file defines a class Person and a subclass Student. 
 
-The Person class represents a person and has the attributes firstName, lastName, and homeCountry. It has two methods: printName() which prints the person's first and last name, and printCountry() which prints the person's home country.
+The Person class has three attributes: firstName, lastName, and homeCountry. It also has two methods: printName() and printCountry(). The printName() method prints the first and last name of the person, while the printCountry() method prints the person's home country.
 
-The Student class is a subclass of Person and adds the attribute universityName. It has one method, printUniversity(), which prints the student's university name.
+The Student class is a subclass of Person and has an additional attribute universityName. It inherits the attributes and methods of the Person class and also has a method printUniversity() that prints the name of the student's university.
 
-Both classes are used to represent individuals and can be used in various projects involving people.
+Both classes are used to represent individuals and their personal information. 
 """
 
 ######################################
@@ -172,25 +163,20 @@ Both classes are used to represent individuals and can be used in various projec
 Processing file proxy.py, query 1
 Usage:
 	prompt_tokens: 191
-	completion_tokens: 201
-	total_tokens: 392
+	completion_tokens: 150
+	total_tokens: 341
 
 Response:
 """
-This module contains three classes - Customer, IChannel, Channel and ProxyChannel.
+This file defines three classes: Customer, IChannel, Channel, and ProxyChannel. 
 
-Customer class represents a customer with an age attribute and a method to get the age.
+Customer class has a constructor that takes an age parameter and initializes a private attribute __age. It also has a method get_age that returns the age of the customer.
 
-IChannel is an abstract base class with an abstract method provide_broadcast.
+IChannel is an abstract base class that defines an abstract method provide_broadcast.
 
-Channel is a concrete implementation of IChannel and overrides the provide_broadcast method to print a message.
+Channel class inherits from IChannel and implements the provide_broadcast method by printing "Broadcast started...".
 
-ProxyChannel is a concrete implementation of IChannel and takes a Customer object as input. It creates an instance of Channel and checks if the customer's age is greater than 18. If it is, it calls the provide_broadcast method of the Channel instance and prints a message that the service is registered for billing. If not, it prints a message that the service is not allowed for customers under the age of 18.
-
-Usage:
-    - Instantiate a Customer object with an age attribute.
-    - Instantiate a ProxyChannel object with the Customer object as input.
-    - Call the provide_broadcast method of the ProxyChannel object to check if the customer can access the service.
+ProxyChannel class also inherits from IChannel and has a constructor that takes a customer object and initializes a channel object. It implements the provide_broadcast method by checking the age of the customer and either providing the broadcast and printing a message about billing or printing a message that the service is not allowed for customers under 18.
 
 """
 
@@ -199,20 +185,12 @@ Usage:
 Processing file room.py, query 2
 Usage:
 	prompt_tokens: 57
-	completion_tokens: 88
-	total_tokens: 145
+	completion_tokens: 40
+	total_tokens: 97
 
 Response:
 """
-The Room class represents a room with length and breadth attributes. 
-It contains a method `calculate_area()` that calculates the area of the room 
-by multiplying its length and breadth. The method prints the result as output.
-
-Example usage:
-r = Room()
-r.length = 5.0
-r.breadth = 4.0
-r.calculate_area() # Output: "Area of Room = 20.0"
+This class represents a room with a length and breadth attribute. It also has a method called calculate_area that calculates and prints the area of the room by multiplying the length and breadth attributes. 
 """
 
 ######################################
@@ -220,32 +198,35 @@ r.calculate_area() # Output: "Area of Room = 20.0"
 Processing file fibo.py, query 2
 Usage:
 	prompt_tokens: 73
-	completion_tokens: 102
-	total_tokens: 175
+	completion_tokens: 60
+	total_tokens: 133
 
 Response:
 """
-    This class provides a method to calculate the nth fibonacci number.
-    The `fib` method takes an integer `n` as input and returns the fibonacci number at the nth position.
-    If `n` is 0, it returns 0 and if `n` is 1, it returns 1.
-    For any other value of `n`, the method recursively calculates the fibonacci number by calling `self.fib(n-1)` and `self.fib(n-2)`.
-"""
+This class provides a method to calculate the nth Fibonacci number using recursion.
 
+Attributes:
+    None
+
+Methods:
+    fib(n: int) -> int: Returns the nth Fibonacci number.
+
+Example:
+    fibo = Fibo()
+    fibo.fib(5) # returns 5
+"""
 
 ######################################
 
 Processing file pascal.py, query 2
 Usage:
 	prompt_tokens: 128
-	completion_tokens: 71
-	total_tokens: 199
+	completion_tokens: 102
+	total_tokens: 230
 
 Response:
 """
-The Pascal class generates a Pascal's triangle of height n using dynamic programming.
-The generate method takes an integer n as input and returns a 2-dimensional list of integers that
-represents the Pascal's triangle. The first and last element of each row is 1 and the other
-elements are the sum of the two elements just above it.
+This class generates a Pascal's Triangle of size n and returns it as a list of lists of integers. The generate method takes an integer n as input and returns a List of Lists of integers. The first list contains 1 element, the second list contains 2 elements, and so on, up to the nth list which contains n elements. Each element in the list is calculated using the formula for Pascal's Triangle. The method returns the generated Pascal's Triangle as a List of Lists of integers.
 """
 
 ######################################
@@ -253,21 +234,17 @@ elements are the sum of the two elements just above it.
 Processing file island.py, query 2
 Usage:
 	prompt_tokens: 195
-	completion_tokens: 86
-	total_tokens: 281
+	completion_tokens: 53
+	total_tokens: 248
 
 Response:
 """
-This module defines a class Island that includes a method 'maxAreaOfIsland'.
-The method uses a depth-first search (dfs) algorithm to find the maximum area of an island 
-in a given two-dimensional grid.
+Calculates the maximum area of an island in a given grid.
 
-Args:
-    - grid: a List of List[int], representing the two-dimensional grid containing the islands.
-    
-Returns:
-    - max_area: an integer representing the maximum area of an island.
-    
+:param grid: A 2D list of integers representing the grid.
+:type grid: List[List[int]]
+:return: The maximum area of an island in the grid.
+:rtype: int
 """
 
 ######################################
@@ -275,15 +252,28 @@ Returns:
 Processing file calculate.py, query 2
 Usage:
 	prompt_tokens: 233
-	completion_tokens: 92
-	total_tokens: 325
+	completion_tokens: 139
+	total_tokens: 372
 
 Response:
 """
-This class contains methods to perform mathematical calculations on a given string.
-- update method takes in a sign, a number, and a stack to perform arithmetic operations and modifies the stack accordingly.
-- solve method takes in an index and a string and recursively performs arithmetic operations using the update method. It returns the sum of the stack and the updated index after the operation.
-- calculate method takes in a string and returns the final calculated result using the solve method.
+Class to perform mathematical calculations on a given string input.
+
+Methods:
+- update: updates the stack based on the sign and number provided
+- solve: solves the mathematical expression recursively using stack and parentheses
+- calculate: calculates the final result of the mathematical expression
+
+Parameters:
+- sign: the sign of the number being added or subtracted
+- num: the number being added or subtracted
+- stack: the stack to store the numbers and signs
+- i: the index of the current character being evaluated
+- s: the string input to be evaluated
+
+Returns:
+- stack: the updated stack after each operation
+- sum(stack): the final result of the mathematical expression
 """
 
 ######################################
@@ -291,12 +281,20 @@ This class contains methods to perform mathematical calculations on a given stri
 Processing file english.py, query 2
 Usage:
 	prompt_tokens: 616
-	completion_tokens: 120
-	total_tokens: 736
+	completion_tokens: 246
+	total_tokens: 862
 
 Response:
 """
-This is a class called English with a method called numberToWords that takes an integer as input and returns its English worded form as a string. The method uses dictionaries to store the English words for one, two and three digit numbers. It also defines two helper functions called get_three_digit_num and get_two_digit_num to handle possible three and two digit numbers respectively by recursively converting them to their worded form. Finally, the method checks for the given number's magnitude and decides how to convert it to its corresponding worded form by using the helper functions, and returns the resulting string.
+This class provides a method to convert a given integer into its English word representation. The method 'numberToWords' takes an integer 'num' as input and returns a string representing the English word equivalent of the input number. 
+
+The method uses three dictionaries - 'one_digit', 'two_digit', and 'tens' - to store the English word representations of numbers from 1 to 9, 10 to 19, and multiples of 10 from 20 to 90, respectively. 
+
+The method also defines two helper functions - 'get_three_digit_num' and 'get_two_digit_num' - to convert three-digit and two-digit numbers into their English word representations. 
+
+The 'numberToWords' method first checks if the input number is zero. If it is, the method returns the string "Zero". Otherwise, it breaks down the input number into its billion, million, thousand, and last three-digit components, and converts each component into its English word representation using the helper functions. The resulting English word representations are concatenated with appropriate separators to form the final output string.
+
+The method takes an integer 'num' as input and returns a string representing the English word equivalent of the input number.
 """
 
 ######################################
@@ -304,41 +302,46 @@ This is a class called English with a method called numberToWords that takes an 
 Processing file mycalendar.py, query 2
 Usage:
 	prompt_tokens: 192
-	completion_tokens: 174
-	total_tokens: 366
+	completion_tokens: 158
+	total_tokens: 350
 
 Response:
 """
 A class representing a node in a binary search tree used for booking events in a calendar.
+
 Attributes:
 - start (int): The start time of the event.
 - end (int): The end time of the event.
 - left (Node): The left child node of the current node.
 - right (Node): The right child node of the current node.
+
 Methods:
 - insert(node): Inserts a new node into the binary search tree based on the start and end times of the event.
 - book(start, end): Books an event in the calendar by inserting a new node into the binary search tree.
+
 Example usage:
-calendar = MyCalendar()
-calendar.book(10, 20) # Returns True
-calendar.book(15, 25) # Returns False
+    calendar = MyCalendar()
+    calendar.book(10, 20) # Returns True
+    calendar.book(15, 25) # Returns False
 """
+
+
 
 ######################################
 
 Processing file solution.py, query 2
 Usage:
 	prompt_tokens: 216
-	completion_tokens: 50
-	total_tokens: 266
+	completion_tokens: 54
+	total_tokens: 270
 
 Response:
 """
-Sort a linked list in ascending order using merge sort.
+Sorts a linked list in ascending order using merge sort algorithm.
 
-:param head: Optional parameter representing the head of the linked list.
+:param head: The head node of the linked list to be sorted.
 :type head: Optional[ListNode]
-:return: Optional parameter representing the sorted linked list.
+:return: The head node of the sorted linked list.
 :rtype: Optional[ListNode]
 """
 
@@ -347,18 +350,28 @@ Sort a linked list in ascending order using merge sort.
 Processing file person.py, query 2
 Usage:
 	prompt_tokens: 135
-	completion_tokens: 118
-	total_tokens: 253
+	completion_tokens: 197
+	total_tokens: 332
 
 Response:
 """
-This code defines two classes: Person and Student. 
+This code defines two classes, Person and Student. 
 
-Class Person has three attributes - firstName, lastName, and homeCountry - which are assigned values through the __init__ method. It also has two methods, printName and printCountry, which respectively print the first and last names of the person, and their home country.
+The Person class has three attributes: firstName, lastName, and homeCountry. It also has two methods: printName, which prints the person's first and last name, and printCountry, which prints the person's home country.
 
-Class Student is a subclass of Person and has an additional attribute universityName. It also has a method printUniversity, which prints the name of the university the student attends. 
+The Student class inherits from the Person class and adds an additional attribute, universityName. It also has a method called printUniversity, which prints the student's university name.
 
-Both classes are designed to represent people and provide methods for printing their information. 
+To create a new Person or Student object, pass in the appropriate arguments to the __init__ method. 
+
+Example usage:
+person = Person("John", "Doe", "USA")
+person.printName() # prints "John Doe"
+person.printCountry() # prints "USA"
+
+student = Student("Jane", "Smith", "Canada", "University of Toronto")
+student.printName() # prints "Jane Smith"
+student.printCountry() # prints "Canada"
+student.printUniversity() # prints "University of Toronto"
 """
 
 ######################################
@@ -366,20 +379,20 @@ Both classes are designed to represent people and provide methods for printing t
 Processing file proxy.py, query 2
 Usage:
 	prompt_tokens: 193
-	completion_tokens: 224
-	total_tokens: 417
+	completion_tokens: 180
+	total_tokens: 373
 
 Response:
 """
-This code defines classes related to broadcast channels and customers. It also defines an abstract class IChannel with an abstract method provide_broadcast(), which is implemented by two concrete classes Channel and ProxyChannel. Channel provides a simple implementation of provide_broadcast(), while ProxyChannel provides a proxy implementation that checks if the customer is above 18 years of age before allowing broadcast access. 
+This module defines three classes: Customer, IChannel, Channel, and ProxyChannel.
 
-Class Customer has a private attribute __age and a public method get_age() to retrieve it. 
+Customer class has a constructor that takes an age parameter and initializes a private instance variable __age. It also has a method get_age that returns the age of the customer.
 
-Class IChannel is an abstract base class that defines a single method provide_broadcast(). This method has a documentation string "broadcasting". 
+IChannel is an abstract base class that defines an abstract method provide_broadcast.
 
-Class Channel extends IChannel and provides an implementation of provide_broadcast() by printing a message "Broadcast started...". 
+Channel class is a concrete implementation of IChannel that overrides the provide_broadcast method to print "Broadcast started...".
 
-Class ProxyChannel also extends IChannel and has an instance of Customer and a Channel as attributes. It overrides provide_broadcast() by first retrieving the age of the customer associated with the instance and, depending on the age, either allowing or disallowing access to the broadcast channel. If allowed, it calls the provide_broadcast() method of the associated Channel instance and prints a message indicating successful registration for billing.
+ProxyChannel class is another concrete implementation of IChannel that takes a Customer object as a parameter in its constructor. It also initializes a Channel object. The provide_broadcast method checks the age of the customer and if it is greater than 18, it calls the provide_broadcast method of the Channel object and prints "this service is registered for billing." Otherwise, it prints "sorry, this service is not allowed for the customers under the age of 18."
 """
 
 ######################################
@@ -387,44 +400,38 @@ Class ProxyChannel also extends IChannel and has an instance of Customer and a C
 Processing file room.py, query 3
 Usage:
 	prompt_tokens: 59
-	completion_tokens: 85
-	total_tokens: 144
+	completion_tokens: 117
+	total_tokens: 176
 
 Response:
 """
-This class represents a Room with length and breadth attributes, along with a method to calculate the area.
+This class represents a room with a length and breadth attribute. It also has a method to calculate the area of the room. 
 
 Attributes:
-length (float): The length of the room.
-breadth (float): The breadth of the room.
+    length (float): The length of the room.
+    breadth (float): The breadth of the room.
+
 Methods:
-calculate_area(): Calculates the area of the room by multiplying the length and breadth attributes.
+    calculate_area(): Calculates the area of the room by multiplying the length and breadth attributes.
 
-class Room:
-    length = 0.0
-    breadth = 0.0
-
-    def calculate_area(self):
-        """
-        This method calculates and prints the area of the room by multiplying the length and breadth attributes.
-        """
-        print("Area of Room = ", self.length*self.breadth)
+Example usage:
+    room = Room()
+    room.length = 10.0
+    room.breadth = 5.0
+    room.calculate_area() # Output: Area of Room = 50.0
+"""
 
 ######################################
 
 Processing file fibo.py, query 3
 Usage:
 	prompt_tokens: 75
-	completion_tokens: 42
-	total_tokens: 117
+	completion_tokens: 96
+	total_tokens: 171
 
 Response:
 """
-This class contains a method to calculate the nth Fibonacci number.
-:param n: The index of the desired Fibonacci number.
-:type n: int
-:return: The nth Fibonacci number.
-:rtype: int
+Class Fibo represents a Fibonacci sequence generator. It contains a single method, fib, which takes an integer n as input and returns the nth number in the Fibonacci sequence. If n is 0, the method returns 0. If n is 1, the method returns 1. For all other values of n, the method recursively calculates the sum of the previous two numbers in the sequence. The method takes an integer n as input and returns an integer. 
 """
 
 ######################################
@@ -432,29 +439,25 @@ This class contains a method to calculate the nth Fibonacci number.
 Processing file pascal.py, query 3
 Usage:
 	prompt_tokens: 130
-	completion_tokens: 224
-	total_tokens: 354
+	completion_tokens: 170
+	total_tokens: 300
 
 Response:
 """
-Class representing a Pascal Triangle generator.
+A class that generates Pascal's Triangle up to a given number of rows.
 
-This class contains a method to generate the Pascal Triangle up to a specified number of rows.
-The generate method takes an integer n, which specifies the number of rows to generate, and returns a list of lists representing the triangle.
-Each inner list contains the values for a particular row, with the first row being [1] and each subsequent row being generated from the previous row.
-The values within each row are determined using the formula for Pascal's Triangle, where the value in the ith row and jth column is the sum of the value in the (i-1)th row and (j-1)th column and the value in the (i-1)th row and jth column.
+The Pascal class contains a single method, generate, which takes an integer n as input and returns a list of lists representing Pascal's Triangle up to the nth row. Each inner list contains the coefficients for the corresponding row of Pascal's Triangle.
 
-Example Usage:
-p = Pascal()
-triangle = p.generate(5)
-# triangle now contains [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-
+Example usage:
+    p = Pascal()
+    triangle = p.generate(5)
+    # triangle = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 
 Args:
-    None
+    n (int): The number of rows to generate in Pascal's Triangle.
 
 Returns:
-    None
+    List[List[int]]: A list of lists representing Pascal's Triangle up to the nth row.
 """
 
 ######################################
@@ -462,12 +465,29 @@ Returns:
 Processing file island.py, query 3
 Usage:
 	prompt_tokens: 197
-	completion_tokens: 135
-	total_tokens: 332
+	completion_tokens: 433
+	total_tokens: 630
 
 Response:
 """
-The Island class represents a grid of islands and provides a method to calculate the maximum area of an island in the grid. The maxAreaOfIsland method takes in a 2D list of integers representing the grid and returns an integer representing the maximum area of an island in the grid. The method uses depth-first search (DFS) to traverse the grid and find the area of each island. The DFS function is defined within the maxAreaOfIsland method and takes in the current row and column indices as parameters. If the current cell is out of bounds or is not part of an island, the function returns 0. Otherwise, the function marks the current cell as visited and recursively calls itself on the neighboring cells. The area of the island is calculated as the sum of all the cells visited during the DFS. The max_area variable is updated with the maximum area found so far. The method returns the max_area variable as the result.
+The Island class represents a grid of islands and provides a method to calculate the maximum area of an island in the grid. The maxAreaOfIsland method takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid. 
+
+The dfs method is a helper function that performs a depth-first search to find the area of an island starting from a given cell. It takes two integers i and j as input representing the row and column indices of the starting cell and returns an integer representing the area of the island.
+
+The class uses the List type from the typing module to specify the type of the input grid. The maxAreaOfIsland method uses a nested loop to iterate over all cells in the grid and calls the dfs method to calculate the area of each island. The method returns the maximum area of all islands in the grid.
+
+Example usage:
+island = Island()
+grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+        [0,0,0,0,0,0,0,1,1,1,0,0,0],
+        [0,1,1,0,1,0,0,0,0,0,0,0,0],
+        [0,1,0,0,1,1,0,0,1,0,1,0,0],
+        [0,1,0,0,1,1,0,0,1,1,1,0,0],
+        [0,0,0,0,0,0,0,0,0,0,1,0,0],
+        [0,0,0,0,0,0,0,1,1,1,0,0,0],
+        [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+max_area = island.maxAreaOfIsland(grid)
+print(max_area) # Output: 6
 """
 
 ######################################
@@ -475,24 +495,33 @@ The Island class represents a grid of islands and provides a method to calculate
 Processing file calculate.py, query 3
 Usage:
 	prompt_tokens: 235
-	completion_tokens: 106
-	total_tokens: 341
+	completion_tokens: 82
+	total_tokens: 317
 
 Response:
-"""A class that provides methods for performing mathematical calculations on equations written in infix notation.
-The class makes use of a stack data structure to hold and manipulate operands and operators. The update method is used to push operands onto the stack based on the sign of the current operator, while the solve method recursively evaluates the entire equation until a final result is reached. The calculate method is the entry point for the class and takes a string parameter representing the infix equation to be evaluated. The method returns an integer value representing the result of the calculation."""
+"""
+A class to perform mathematical calculations on a given string input.
+
+Methods:
+- update: updates the stack based on the sign and number provided
+- solve: solves the mathematical expression recursively using stack and parentheses
+- calculate: calculates the final result of the mathematical expression
+
+Usage:
+Create an instance of the Calculate class and call the calculate method with a string input to get the result of the mathematical expression.
+"""
 
 ######################################
 
 Processing file english.py, query 3
 Usage:
 	prompt_tokens: 618
-	completion_tokens: 130
-	total_tokens: 748
+	completion_tokens: 163
+	total_tokens: 781
 
 Response:
 """
-Class English takes in an integer and converts it to its English words equivalent. The function numberToWords() takes in an integer and returns the English words equivalent of the number. The function is based on the convention used in the United States and assumes input numbers are positive and less than or equal to 2^31 - 1. The class contains three dictionaries for one_digit, two_digit, and tens that store the translation of these numbers to their corresponding English words. The class also contains two helper functions, get_three_digit_num() and get_two_digit_num(), which convert three or two digit numbers respectively to their English words equivalent. 
+Class English represents a utility to convert a given integer number to its English word representation. The class contains a single method numberToWords which takes an integer as input and returns its English word representation as a string. The method uses dictionaries to store the English word representation of one-digit, two-digit, and tens places numbers. It also contains two helper methods get_three_digit_num and get_two_digit_num to convert three-digit and two-digit numbers to their English word representation. The method first breaks down the input number into its billion, million, thousand, and last three digits components and then converts each component to its English word representation using the helper methods. Finally, it concatenates all the components' English word representation to form the final result. If the input number is zero, the method returns "Zero". 
 """
 
 ######################################
@@ -500,55 +529,43 @@ Class English takes in an integer and converts it to its English words equivalen
 Processing file mycalendar.py, query 3
 Usage:
 	prompt_tokens: 194
-	completion_tokens: 130
-	total_tokens: 324
+	completion_tokens: 123
+	total_tokens: 317
 
 Response:
 """
-A class representing a node in a binary search tree used to store booked time slots in a calendar.
+A class representing a node in a binary search tree used for booking events in a calendar.
 
-Each node contains the start and end times of a time slot, as well as pointers to its left and right children.
-
-This class is meant to be used as part of the MyCalendar class for booking time slots.
+Attributes:
+- start (int): The start time of the event.
+- end (int): The end time of the event.
+- left (Node): The left child node.
+- right (Node): The right child node.
 
 Methods:
-- insert(): inserts a new node into the BST, based on the start and end times of the new node and the existing nodes in the tree.
+- insert(node): Inserts a new node into the binary search tree.
+- book(start, end): Books an event in the calendar by inserting a new node into the binary search tree.
 
-Instantiation:
-- To create a new node in the BST, use the syntax Node(start, end).
-
-Example usage:
-node = Node(10, 15)
 """
+
+# Note: This documentation comment is for the Node class, not the MyCalendar class.
 
 ######################################
 
 Processing file solution.py, query 3
 Usage:
 	prompt_tokens: 218
-	completion_tokens: 210
-	total_tokens: 428
+	completion_tokens: 118
+	total_tokens: 336
 
 Response:
 """
-ListNode class represents a node in a singly linked list. It has two attributes: 
-- val, an integer value that stores the data of a node
-- next, a reference to the next node in the list
-
-Solution class contains the implementation of merge sort algorithm to sort a given linked list in ascending order. It has one method:
-- sortList(head: Optional[ListNode]) -> Optional[ListNode]: sorts the linked list starting from the given head by recursively splitting it into subproblems, sorting them, and merging them.
-
-Parameters:
-    - head: Optional[ListNode]
-        The head of the linked list to be sorted. Default value is None.
-        
-Returns:
-    - Optional[ListNode]
-        The head of the sorted linked list. If head is None, it returns None.
-
-Example:
-    Given the following linked list: 4 -> 2 -> 1 -> 3
-    Solution().sortList(head) will return the head of the sorted list: 1 -> 2 -> 3 -> 4
+ListNode class represents a node in a singly linked list with a value and a pointer to the next node.
+Solution class contains a method sortList that takes a head node of a linked list and returns the sorted linked list.
+If the head node is None or there is only one node in the linked list, the method returns the head node.
+The method uses merge sort algorithm to sort the linked list.
+The method splits the linked list into two halves using slow and fast pointers and recursively sorts the two halves.
+Then, it merges the two sorted halves into a single sorted linked list.
 """
 
 ######################################
@@ -556,27 +573,24 @@ Example:
 Processing file person.py, query 3
 Usage:
 	prompt_tokens: 137
-	completion_tokens: 145
-	total_tokens: 282
+	completion_tokens: 151
+	total_tokens: 288
 
 Response:
 """
-This class represents a person with a first name, last name, and home country.
-The Person class also has methods to print the person's name and home country.
+This class represents a person and their basic information such as first name, last name, and home country. It also includes a method to print the person's name and home country. 
 
-The Student class is a subclass of Person, with an additional attribute of universityName.
-It also has a method to print the university name.
+The class Student is a subclass of Person and includes an additional attribute for the university name. It also includes a method to print the university name. 
 
 Example usage:
 person = Person("John", "Doe", "USA")
+person.printName() # prints "John Doe"
+person.printCountry() # prints "USA"
+
 student = Student("Jane", "Smith", "Canada", "University of Toronto")
-
-person.printName() # output: John Doe
-person.printCountry() # output: USA
-
-student.printName() # output: Jane Smith
-student.printCountry() # output: Canada
-student.printUniversity() # output: University of Toronto
+student.printName() # prints "Jane Smith"
+student.printCountry() # prints "Canada"
+student.printUniversity() # prints "University of Toronto"
 """
 
 ######################################
@@ -584,18 +598,22 @@ student.printUniversity() # output: University of Toronto
 Processing file proxy.py, query 3
 Usage:
 	prompt_tokens: 195
-	completion_tokens: 174
-	total_tokens: 369
+	completion_tokens: 196
+	total_tokens: 391
 
 Response:
 """
-The Customer class represents a customer object with an age attribute. This class is used as a parameter for the ProxyChannel class.
+This module contains three classes: Customer, IChannel, Channel, and ProxyChannel.
 
-The IChannel class is an abstract base class that defines the provide_broadcast() method. This method is implemented by the Channel and ProxyChannel classes.
+The Customer class represents a customer with an age attribute. It has a getter method to retrieve the age.
 
-The Channel class provides a basic implementation of the provide_broadcast() method that prints "Broadcast started...".
+The IChannel class is an abstract base class that defines the interface for a broadcasting channel. It has one abstract method, provide_broadcast(), which must be implemented by any concrete subclass.
 
-The ProxyChannel class implements the IChannel interface. It uses composition to include a Customer object and an instance of the Channel class. The provide_broadcast() method checks the age of the customer and decides whether to allow the broadcast or not. If the customer is over 18, it calls the provide_broadcast() method of the Channel instance and prints "this service is registered for billing." Otherwise, it prints "sorry, this service is not allowed for the customers under the age of 18."
+The Channel class is a concrete subclass of IChannel that provides a simple implementation of the provide_broadcast() method.
+
+The ProxyChannel class is another concrete subclass of IChannel that acts as a proxy for the Channel class. It takes a Customer object as a parameter and checks the customer's age before allowing them to access the Channel's provide_broadcast() method. If the customer is over 18, the broadcast is started and the service is registered for billing. Otherwise, an error message is printed.
+
+Note that the IChannel class is imported from the abc module, which is part of the Python standard library.
 """
 
 ######################################
@@ -603,47 +621,42 @@ The ProxyChannel class implements the IChannel interface. It uses composition to
 Processing file room.py, query 4
 Usage:
 	prompt_tokens: 53
-	completion_tokens: 119
-	total_tokens: 172
+	completion_tokens: 72
+	total_tokens: 125
 
 Response:
-class Room:
-    """
-    This class represents a Room object with a length and breadth property.
-    It also has a method to calculate the area of the Room.
+"""
+This is a class called Room that represents a physical room with a length and breadth attribute. 
 
-    Attributes:
-    length (float): The length of the Room.
-    breadth (float): The breadth of the Room.
-    """
+Attributes:
+- length (float): the length of the room
+- breadth (float): the breadth of the room
 
-    length = 0.0
-    breadth = 0.0
-
-    def calculate_area(self):
-        """
-        This method calculates and prints the area of the Room.
-
-        Returns:
-        None
-        """
-        print("Area of Room = ", self.length*self.breadth)
+Methods:
+- calculate_area(): calculates the area of the room by multiplying the length and breadth attributes and prints the result to the console.
+"""
 
 ######################################
 
 Processing file fibo.py, query 4
 Usage:
 	prompt_tokens: 69
-	completion_tokens: 114
-	total_tokens: 183
+	completion_tokens: 209
+	total_tokens: 278
 
 Response:
 """
-This file defines a class named Fibo that contains a method named "fib".
-The "fib" method takes an integer argument "n" and returns the nth number in the Fibonacci sequence.
-The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones,
-starting from 0 and 1. If n is 0, the method returns 0, and if n is 1, the method returns 1. 
-Otherwise, the method recursively calculates the Fibonacci number by adding the previous two numbers in the sequence.
+This is a class named Fibo that contains a method named fib. The fib method takes an integer n as input and returns an integer as output. The method calculates the nth Fibonacci number using recursion.
+
+The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding numbers. The first two numbers in the sequence are 0 and 1. Therefore, if n is 0, the method returns 0. If n is 1, the method returns 1. Otherwise, the method recursively calls itself with n-1 and n-2 as inputs and returns the sum of the two results.
+
+The method takes an integer n as input and returns an integer as output. The input n must be a non-negative integer. The output is the nth Fibonacci number.
+
+Example usage:
+f = Fibo()
+print(f.fib(0)) # Output: 0
+print(f.fib(1)) # Output: 1
+print(f.fib(10)) # Output: 55
 """
 
 ######################################
@@ -651,372 +664,39 @@ Otherwise, the method recursively calculates the Fibonacci number by adding the 
 Processing file pascal.py, query 4
 Usage:
 	prompt_tokens: 124
-	completion_tokens: 223
-	total_tokens: 347
+	completion_tokens: 354
+	total_tokens: 478
 
 Response:
 """
-Pascal's Triangle Generator
+This module contains a class Pascal that generates a Pascal's Triangle of size n.
 
-This module contains a class 'Pascal' which has a single method 'generate' that
-returns Pascal's Triangle of the specified level.
+The Pascal class has one method:
+    - generate(n: int) -> List[List[int]]: 
+        This method takes an integer n as input and returns a List of Lists of integers representing the Pascal's Triangle of size n.
 
-Pascal's triangle is a triangular array of the binomial coefficients.
-The first row consists of a single 1. The second row of two 1's.
-Each subsequent row is built by adding the two elements above, either side of
-the current location, to produce the current value.
-
-Example:
-    Input: Pascal().generate(5)
-    Output: [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-
-    The 5th row in the triangle has the values 1, 4, 6, 4, 1.
-
-Parameters:
-    n (int): The level of the triangle to be generated.
-
-Returns:
-    (List[List[int]]): A 2-dimensional list representing the Pascal's Triangle
-        of the specified level.
-"""
-
-######################################
-
-Processing file island.py, query 4
-Usage:
-	prompt_tokens: 191
-	completion_tokens: 215
-	total_tokens: 406
-
-Response:
-"""
-This module contains a class Island that implements a method to find the maximum area of an island in a given grid.
-The Island class has one method:
-- maxAreaOfIsland(grid: List[List[int]]) -> int: This method takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
-The maxAreaOfIsland method uses a depth-first search algorithm to traverse the grid and find the area of each island. It returns the maximum area found.
-The dfs function is a helper function that performs the depth-first search. It takes two integer parameters i and j representing the current position in the grid. It returns an integer representing the area of the island starting from the current position.
-The input grid is a 2D list of integers where 0 represents water and 1 represents land.The method assumes that the grid is rectangular and non-empty.
 Example usage:
-island = Island()
-grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
-          [0,0,0,0,0,0,0,1,1,1,0,0,0],          
-          [0,1,1,0,1,0,0,0,0,0,0,0,0],            
-          [0,1,0,0,1,1,0,0,1,0,1,0,0],           
-          [0,1,0,0,1,1,0,0,1,1,1,0,0],
-          [0,0,0,0,0,0,0,0,0,0,1,0,0],          
-          [0,0,0,0,0,0,0,1,1,1,0,0,0],            
-          [0,0,0,0,0,0,0,1,1,0,0,0,0]]  
-          max_area = island.maxAreaOfIsland(grid)
-          print(max_area) # Output: 6
-"""
-
-######################################
-
-Processing file calculate.py, query 4
-Usage:
-	prompt_tokens: 229
-	completion_tokens: 596
-	total_tokens: 825
-
-Response:
-class Calculate:
-    """
-    This class implements a mathematical expression calculator.
-
-    Methods:
-    update(sign, num, stack): Appends a new number (num) with either a positive or negative sign
-        to an existing stack of numbers.
-        sign (str): "+" or "-"
-        num (int): integer
-        stack (list): list of integers
-        returns updated stack
-
-    solve(i, s): Recursively evaluates an expression, given its starting index (i) and string (s).
-        i (int): integer representing the starting index of the expression
-        s (str): string representation of the expression
-        returns the result of the expression calculation
-
-    calculate(s: str) -> int: Takes a string representation of a mathematical expression and
-        returns the result of its calculation.
-        s (str): string representation of the expression
-        returns the result of the expression calculation as an integer
-    """
-
-    def update(self, sign, num, stack):
-        """
-        Appends a new number (num) with either a positive or negative sign to an existing stack of numbers.
-
-        Args:
-        sign (str): "+" or "-"
-        num (int): integer
-        stack (list): list of integers
-
-        Returns:
-        The updated stack (list of integers).
-        """
-        if sign == "+":
-            stack.append(num)
-        if sign == "-":
-            stack.append(-num)
-        
-        return stack
-
-    def solve(self, i, s):
-        """
-        Recursively evaluates an expression, given its starting index (i) and string (s).
-
-        Args:
-        i (int): integer representing the starting index of the expression
-        s (str): string representation of the expression
-
-        Returns:
-        The result of the expression calculation (int) and the current index (i) in the string.
-        """
-        stack, num, sign = [], 0, "+"
-        
-        while i < len(s):
-            if s[i].isdigit():
-                num = num * 10 + int(s[i])
-            
-            elif s[i] == "+" or s[i] == "-":
-                stack = self.update(sign, num, stack)
-                num, sign = 0, s[i]
-            
-            elif s[i] == "(":
-                num, i = self.solve(i + 1, s)
-            
-            elif s[i] == ")":
-                stack = self.update(sign, num, stack)
-                return sum(stack), i
-            
-            i += 1
-        
-        stack = self.update(sign, num, stack)
-        return sum(stack)
-
-    def calculate(self, s: str) -> int:
-        """
-        Takes a string representation of a mathematical expression and returns the result of its calculation.
-
-        Args:
-        s (str): string representation of the expression
-
-        Returns:
-        The result of the expression calculation as an integer.
-        """
-        return self.solve(0, s)
-
-######################################
-
-Processing file english.py, query 4
-Usage:
-	prompt_tokens: 612
-	completion_tokens: 254
-	total_tokens: 866
-
-Response:
-The `English` class includes a method `numberToWords` that takes an integer value and converts it to its English words representation. The method contains three dictionaries `one_digit`, `two_digit`, and `tens` that map integer values to their corresponding English word representations.
-
-There are two additional helper functions inside the `numberToWords` method: `get_two_digit_num` and `get_three_digit_num`. `get_two_digit_num` takes an integer argument and returns its English word representation as a two-digit number, while `get_three_digit_num` takes an integer argument and returns its English word representation as a three-digit number.
-
-The `numberToWords` method first checks if the input number is equal to 0, and if so, returns the string "Zero". It then calculates the number of billions, millions, thousands, and last three digits in the input number using integer division and modulo operators.
-
-Finally, the method constructs the English word representation of the input number by concatenating the English word representation of each component (billions, millions, thousands, and last three) with the appropriate unit (e.g. "Billion", "Million", "Thousand"), separated by a space character. The result is returned as a string.
-
-######################################
-
-Processing file mycalendar.py, query 4
-Usage:
-	prompt_tokens: 188
-	completion_tokens: 236
-	total_tokens: 424
-
-Response:
-Class Node represents a node in a binary search tree. It includes an __init__() function to initialize each node with start and end values, as well as left and right pointers.
-
-The insert() method takes in another node and uses the start and end values to navigate the binary search tree and determine where the new node should be placed. If the new node's start value is greater than the current node's end value, it is placed to the right of the current node. If the new node's end value is less than the current node's start value, it is placed to the left of the current node. If neither of these cases is true, the new node cannot be inserted, and False is returned.
-
-The MyCalendar class utilizes the Node class to create a binary search tree of events. The book() method takes in a start and end time and first checks if the binary search tree is empty. If it is, the new event is inserted at the root position. If the tree is not empty, the insert() method is called on the root node with the new event as an argument, and True or False is returned depending on whether the event was successfully inserted.
-
-######################################
-
-Processing file solution.py, query 4
-Usage:
-	prompt_tokens: 212
-	completion_tokens: 339
-	total_tokens: 551
-
-Response:
-"""
-This file contains a class 'ListNode' and a class 'Solution' with a method 'sortList'. 
-
-ListNode - A class that defines a node in a linked list which has a value and a reference to the next node.
-
-Solution - A class that consists of a method 'sortList' which takes a linked list as input and returns the sorted linked list.
-
-The 'sortList' method uses the merge sort algorithm to sort the linked list. It recursively divides the linked list into two halves until it reaches the base case where the linked list contains only one node. Then, it merges the two sorted halves to get the final sorted linked list. 
-
-The method takes in a parameter 'head' - a linked list node which is the head of the linked list. It returns an Optional[ListNode], which is either the head of the sorted linked list or None if the input linked list is empty.
-
-If the input head node is empty or contains only one element, it returns the same node as it is already sorted. Otherwise, it divides the linked list into two halves using a slow and a fast pointer to get the midpoint of the list. Then, it sorts the two halves recursively by calling the sortList method on the left and right halves respectively.
-
-To merge the two sorted halves, it creates a dummy node and initializes a current pointer to this node. It then compares the values of the two halves and assigns the smaller value to the 'next' pointer of the current node. It then proceeds to the next smallest value until both the halves are completely merged.
-
-Finally, it returns the 'next' pointer of the dummy node which is the head of the sorted linked list.
-
-"""
-
-######################################
-
-Processing file person.py, query 4
-Usage:
-	prompt_tokens: 131
-	completion_tokens: 175
-	total_tokens: 306
-
-Response:
-"""
-This file defines two classes: Person and Student.
-
-Class Person has three instance variables: firstName, lastName, and homeCountry. It has two methods: printName, which prints the first and last name of the person, and printCountry, which prints the home country of the person.
-
-Class Student inherits from Person and has an additional instance variable, universityName. It has one method, printUniversity, which prints the name of the university the student attends.
-
-Usage example:
-person = Person("John", "Doe", "USA")
-person.printName() # Prints "John Doe"
-person.printCountry() # Prints "USA"
-
-student = Student("Jane", "Smith", "Canada", "University of Toronto")
-student.printName() # Prints "Jane Smith"
-student.printCountry() # Prints "Canada"
-student.printUniversity() # Prints "University of Toronto"
-"""
-
-######################################
-
-Processing file proxy.py, query 4
-Usage:
-	prompt_tokens: 189
-	completion_tokens: 218
-	total_tokens: 407
-
-Response:
-"""
-This file contains classes related to broadcasting channels, customers and proxy channels.
-
-Customer: 
-    This class represents a customer who has an age attribute. 
-    It has a get_age() method that returns the customer's age.
-
-IChannel: 
-    This class is an abstract base class that defines the method that should be implemented by its subclasses.
-    Subclasses should implement provide_broadcast() method.
-
-Channel: 
-    This class is a concrete implementation of IChannel class.
-    It overrides the provide_broadcast() method and prints 'Broadcast started...' message.
-
-ProxyChannel: 
-    This class is a concrete implementation of IChannel class.
-    It takes a Customer object as an argument during initialization.
-    It has a provide_broadcast() method that checks the age of the customer.
-    If the customer's age is greater than 18, it calls the provide_broadcast() method of the Channel class and prints 
-    'this service is registered for billing.' message.
-    Otherwise, it prints 'sorry, this service is not allowed for the customers under the age of 18.' message.
-"""
-
-######################################
-
-Processing file room.py, query 5
-Usage:
-	prompt_tokens: 62
-	completion_tokens: 94
-	total_tokens: 156
-
-Response:
-"""
-This class represents a room with a length and breadth attribute. 
-
-Methods:
-- calculate_area: calculates and prints the area of the room by multiplying length and breadth.
-"""
-
-class Room:
-    length = 0.0
-    breadth = 0.0
-
-    def calculate_area(self):
-        """
-        Calculates and prints the area of the room by multiplying length and breadth.
-        """
-        print("Area of Room = ", self.length*self.breadth)
-
-######################################
-
-Processing file fibo.py, query 5
-Usage:
-	prompt_tokens: 78
-	completion_tokens: 199
-	total_tokens: 277
-
-Response:
-"""
-This is a class named 'Fibo' which contains a method 'fib' that calculates a Fibonacci number recursively.
-
-The 'fib' method takes an integer 'n' as its input and returns an integer that is the 'n'th number in the Fibonacci sequence.
-
-@param n: The number in the Fibonacci sequence to be calculated
-@type n: int
-@return: The 'n'th number in the Fibonacci sequence
-@rtype: int
-
-If 'n' is 0, the method returns 0. If 'n' is 1, the method returns 1. For any other values of 'n', the method recursively calculates the sum of the two preceding Fibonacci numbers using the formula f(n) = f(n-1) + f(n-2) until it reaches the specified value of 'n'.
-
-Note that the method is a member of the class 'Fibo' and therefore requires an instance of the 'Fibo' class to be called.
-"""
-
-######################################
-
-Processing file pascal.py, query 5
-Usage:
-	prompt_tokens: 133
-	completion_tokens: 269
-	total_tokens: 402
-
-Response:
-"""
-Module that generates a Pascal's Triangle for a given integer n.
-
-Functions:
-----------
-generate(n: int) -> List[List[int]]
-    - generates and returns a Pascal's Triangle of size n.
+    p = Pascal()
+    p.generate(5) # returns [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 
 """
 
 from typing import List
 
 class Pascal:
-    
     def generate(self, n: int) -> List[List[int]]:
         """
-        Generates a Pascal's Triangle for a given integer n.
-        
-        Parameters:
-        -----------
-        n : int
-            The size of the Pascal's Triangle to be generated.
-            
+        This method generates a Pascal's Triangle of size n.
+
+        Args:
+        - n: an integer representing the size of the Pascal's Triangle to be generated.
+
         Returns:
-        --------
-        dp : List[List[int]]
-            The generated Pascal's Triangle.
-            
-        Complexity:
-        -----------
-        Time: O(n^2), as each cell is computed iteratively using values of the previous row.
-        Space: O(n^2), as the entire Pascal's Triangle is stored in a 2D list of size n x n.
+        - A List of Lists of integers representing the Pascal's Triangle of size n.
+
+        Example:
+        p = Pascal()
+        p.generate(5) # returns [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
         """
         dp=[]
         for i in range(1,n+1):
@@ -1031,70 +711,87 @@ class Pascal:
 
 ######################################
 
-Processing file island.py, query 5
+Processing file island.py, query 4
 Usage:
-	prompt_tokens: 200
-	completion_tokens: 268
-	total_tokens: 468
+	prompt_tokens: 191
+	completion_tokens: 444
+	total_tokens: 635
 
 Response:
 """
-This module contains a class Island that has a method maxAreaOfIsland to find the maximum area of an island in a given grid.
-The method maxAreaOfIsland takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
-The function dfs is a helper function that performs depth-first search to find the area of an island starting from a given cell.
-Parameters:
-- grid (List[List[int]]): A 2D list of integers representing the grid.
-Returns:
-- int: The maximum area of an island in the grid.
+This module contains a class Island that implements a method to find the maximum area of an island in a given grid.
+
+The Island class has one method:
+    - maxAreaOfIsland(grid: List[List[int]]) -> int: This method takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
+
+The maxAreaOfIsland method uses a depth-first search algorithm to traverse the grid and find the area of each island. It returns the maximum area found.
+
+The dfs function is a helper function that performs the depth-first search. It takes two integer parameters i and j representing the current position in the grid. It returns an integer representing the area of the island starting from the current position.
+
+The input grid is a 2D list of integers where 0 represents water and 1 represents land. The method assumes that the grid is rectangular and non-empty.
+
 Example usage:
-island = Island()
-grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
-       [0,0,0,0,0,0,0,1,1,1,0,0,0],
-       [0,1,1,0,1,0,0,0,0,0,0,0,0],
-       [0,1,0,0,1,1,0,0,1,0,1,0,0],
-       [0,1,0,0,1,1,0,0,1,1,1,0,0],
-       [0,0,0,0,0,0,0,0,0,0,1,0,0],
-       [0,0,0,0,0,0,0,1,1,1,0,0,0],
-       [0,0,0,0,0,0,0,1,1,0,0,0,0]]
-        max_area = island.maxAreaOfIsland(grid)
-        print(max_area) # Output: 6"
+    island = Island()
+    grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+            [0,0,0,0,0,0,0,1,1,1,0,0,0],
+            [0,1,1,0,1,0,0,0,0,0,0,0,0],
+            [0,1,0,0,1,1,0,0,1,0,1,0,0],
+            [0,1,0,0,1,1,0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0,0,0,0,1,0,0],
+            [0,0,0,0,0,0,0,1,1,1,0,0,0],
+            [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+    max_area = island.maxAreaOfIsland(grid)
+    print(max_area) # Output: 6
 """
 
 ######################################
 
-Processing file calculate.py, query 5
+Processing file calculate.py, query 4
 Usage:
-	prompt_tokens: 238
-	completion_tokens: 494
-	total_tokens: 732
+	prompt_tokens: 229
+	completion_tokens: 511
+	total_tokens: 740
 
 Response:
-"""
-Class to perform calculations on given string input.
-
-Public methods:
-- update(sign, num, stack): update the stack values based on arithmetic sign and number
-- solve(i, s): recursively solve the input arithmetic expression
-- calculate(s): calculate the expression and return the result
-
-Example usage:
-    calculation = Calculate()
-    result = calculation.calculate("2+3-4")
-    print(result) # Output: 1
-"""
-
 class Calculate:
+    """
+    A class that performs basic arithmetic calculations on a given string.
+
+    Methods:
+    --------
+    update(sign, num, stack):
+        Updates the stack based on the sign and number provided.
+
+    solve(i, s):
+        Solves the arithmetic expression recursively.
+
+    calculate(s: str) -> int:
+        Calculates the arithmetic expression and returns the result.
+
+    Attributes:
+    -----------
+    None
+    """
+
     def update(self, sign, num, stack):
         """
-        Update the stack values based on the arithmetic sign and number.
+        Updates the stack based on the sign and number provided.
 
-        Args:
-        - sign (str): Arithmetic sign, either "+" or "-"
-        - num (int): Number to be added to the stack
-        - stack (list): List containing current stack values
+        Parameters:
+        -----------
+        sign: str
+            The sign of the arithmetic operation.
+
+        num: int
+            The number to be added to the stack.
+
+        stack: list
+            The stack to be updated.
 
         Returns:
-        - stack (list): List containing updated stack values
+        --------
+        stack: list
+            The updated stack.
         """
         if sign == "+":
             stack.append(num)
@@ -1104,15 +801,23 @@ class Calculate:
 
     def solve(self, i, s):
         """
-        Recursively solve the given arithmetic expression.
+        Solves the arithmetic expression recursively.
 
-        Args:
-        - i (int): Current index in the arithmetic expression
-        - s (str): Arithmetic expression as a string
+        Parameters:
+        -----------
+        i: int
+            The index of the current character in the string.
+
+        s: str
+            The arithmetic expression to be solved.
 
         Returns:
-        - sum(stack) (int): Sum of all values in the stack
-        - i (int): Updated index of expression string
+        --------
+        sum(stack): int
+            The result of the arithmetic expression.
+
+        i: int
+            The index of the current character in the string.
         """
         stack, num, sign = [], 0, "+"
         while i < len(s):
@@ -1133,49 +838,304 @@ class Calculate:
 
     def calculate(self, s: str) -> int:
         """
-        Calculate the arithmetic expression and return the result.
+        Calculates the arithmetic expression and returns the result.
 
-        Args:
-        - s (str): Arithmetic expression as a string
+        Parameters:
+        -----------
+        s: str
+            The arithmetic expression to be solved.
 
         Returns:
-        - result (int): Result of the arithmetic expression
+        --------
+        sum(stack): int
+            The result of the arithmetic expression.
         """
         return self.solve(0, s)
+
+######################################
+
+Processing file english.py, query 4
+Usage:
+	prompt_tokens: 612
+	completion_tokens: 149
+	total_tokens: 761
+
+Response:
+The English class contains a method called numberToWords that takes an integer as input and returns the English word representation of that number. The method uses dictionaries to store the English word representations of one-digit, two-digit, and tens numbers. It also defines two helper functions to get the English word representation of a two-digit number and a three-digit number. 
+
+The method first checks if the input number is zero and returns "Zero" if it is. It then calculates the number of billions, millions, thousands, and the last three digits of the input number. It uses the helper functions to get the English word representation of each of these numbers and concatenates them to form the final result. 
+
+The method returns the final result as a string.
+
+######################################
+
+Processing file mycalendar.py, query 4
+Usage:
+	prompt_tokens: 188
+	completion_tokens: 281
+	total_tokens: 469
+
+Response:
+"""
+This file contains the implementation of two classes: Node and MyCalendar.
+
+The Node class represents a node in a binary search tree. It has the following attributes:
+- start: the start time of the event represented by the node
+- end: the end time of the event represented by the node
+- left: the left child of the node
+- right: the right child of the node
+
+The class has one method:
+- insert: inserts a new node into the binary search tree. If the new node's start time is greater than or equal to the current node's end time, it is inserted to the right. If the new node's end time is less than or equal to the current node's start time, it is inserted to the left. If the new node overlaps with the current node, it is not inserted and False is returned.
+
+The MyCalendar class represents a calendar that uses a binary search tree to store events. It has the following attribute:
+- root: the root node of the binary search tree
+
+The class has one method:
+- book: adds a new event to the calendar. If the calendar is empty, the new event is added as the root node. Otherwise, the insert method of the root node is called to insert the new event into the binary search tree. If the event is successfully added, True is returned. Otherwise, False is returned.
+"""
+
+######################################
+
+Processing file solution.py, query 4
+Usage:
+	prompt_tokens: 212
+	completion_tokens: 201
+	total_tokens: 413
+
+Response:
+"""
+This file contains a class ListNode and a class Solution. The ListNode class represents a node in a linked list and has two attributes: val and next. The Solution class contains a method sortList that takes in a linked list represented by a ListNode object and returns a sorted linked list.
+
+The sortList method uses the merge sort algorithm to sort the linked list. It first checks if the linked list is empty or has only one node, in which case it returns the linked list as is. Otherwise, it finds the middle node of the linked list using the slow and fast pointer technique. It then recursively sorts the left and right halves of the linked list and merges them using a dummy node and a curr pointer.
+
+The sortList method takes in a parameter head, which is an Optional[ListNode] object, representing the head of the linked list. It returns an Optional[ListNode] object, which is the head of the sorted linked list. If the input linked list is empty, it returns None.
+"""
+
+######################################
+
+Processing file person.py, query 4
+Usage:
+	prompt_tokens: 131
+	completion_tokens: 123
+	total_tokens: 254
+
+Response:
+"""
+This file contains two classes: Person and Student.
+
+The Person class has three attributes: firstName, lastName, and homeCountry. It also has two methods: printName and printCountry. The printName method prints the first and last name of the person, while the printCountry method prints the person's home country.
+
+The Student class is a subclass of Person and has an additional attribute: universityName. It also has a method called printUniversity, which prints the name of the student's university.
+
+Overall, this file provides a basic implementation of a Person and Student class, with methods to print their information.
+"""
+
+######################################
+
+Processing file proxy.py, query 4
+Usage:
+	prompt_tokens: 189
+	completion_tokens: 215
+	total_tokens: 404
+
+Response:
+"""
+This module defines three classes: Customer, IChannel, Channel, and ProxyChannel.
+
+Customer class represents a customer with an age attribute. It has a constructor that initializes the age attribute and a method to get the age.
+
+IChannel is an abstract base class that defines an abstract method called provide_broadcast. It is inherited from the ABC module.
+
+Channel class is a concrete implementation of IChannel. It overrides the provide_broadcast method to print a message indicating that the broadcast has started.
+
+ProxyChannel class is another concrete implementation of IChannel. It takes a Customer object as a parameter in its constructor and creates an instance of Channel. It overrides the provide_broadcast method to check if the customer's age is greater than 18. If it is, it calls the provide_broadcast method of the Channel instance and prints a message indicating that the service is registered for billing. Otherwise, it prints a message indicating that the service is not allowed for customers under the age of 18.
+
+Overall, this module provides a simple implementation of a broadcasting service with age restrictions using the Proxy design pattern.
+"""
+
+######################################
+
+Processing file room.py, query 5
+Usage:
+	prompt_tokens: 62
+	completion_tokens: 130
+	total_tokens: 192
+
+Response:
+"""
+This class represents a room with a length and breadth attribute. It also has a method to calculate the area of the room.
+
+Attributes:
+    length (float): The length of the room.
+    breadth (float): The breadth of the room.
+
+Methods:
+    calculate_area(): Calculates the area of the room by multiplying the length and breadth attributes.
+"""
+
+class Room:
+    length = 0.0
+    breadth = 0.0
+
+    def calculate_area(self):
+        """
+        Calculates the area of the room by multiplying the length and breadth attributes.
+        """
+        print("Area of Room = ", self.length*self.breadth)
+
+######################################
+
+Processing file fibo.py, query 5
+Usage:
+	prompt_tokens: 78
+	completion_tokens: 71
+	total_tokens: 149
+
+Response:
+"""
+This class provides a method to calculate the nth Fibonacci number.
+
+Example usage:
+    fibo = Fibo()
+    result = fibo.fib(5)  # returns 5
+
+Args:
+    n (int): The index of the Fibonacci number to calculate.
+
+Returns:
+    int: The nth Fibonacci number.
+
+Raises:
+    None.
+"""
+
+######################################
+
+Processing file pascal.py, query 5
+Usage:
+	prompt_tokens: 133
+	completion_tokens: 241
+	total_tokens: 374
+
+Response:
+"""
+This module contains a class Pascal that generates Pascal's Triangle up to a given number of rows.
+
+"""
+
+from typing import List
+
+class Pascal:
+    def generate(self, n: int) -> List[List[int]]:
+        """
+        Generates Pascal's Triangle up to n rows.
+
+        Args:
+        - n: an integer representing the number of rows to generate
+
+        Returns:
+        - A list of lists representing Pascal's Triangle up to n rows
+
+        Example:
+        p = Pascal()
+        p.generate(5) -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+        """
+        dp=[]
+        for i in range(1,n+1):
+            dp.append([0]*i)
+        for i in range(0,n):
+            for j in range(0,i+1):
+                if(j==0 or j==i):
+                    dp[i][j]=1
+                else:
+                    dp[i][j]=dp[i-1][j-1]+dp[i-1][j]
+        return dp
+
+
+######################################
+
+Processing file island.py, query 5
+Usage:
+	prompt_tokens: 200
+	completion_tokens: 382
+	total_tokens: 582
+
+Response:
+"""
+This module contains a class Island that has a method maxAreaOfIsland to find the maximum area of an island in a given grid.
+
+The method maxAreaOfIsland takes a 2D list of integers as input and returns an integer representing the maximum area of an island in the grid.
+
+The function dfs is a helper function that performs depth-first search to find the area of an island starting from a given cell.
+
+Parameters:
+    - grid (List[List[int]]): A 2D list of integers representing the grid.
+
+Returns:
+    - int: The maximum area of an island in the grid.
+
+Example usage:
+    island = Island()
+    grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+            [0,0,0,0,0,0,0,1,1,1,0,0,0],
+            [0,1,1,0,1,0,0,0,0,0,0,0,0],
+            [0,1,0,0,1,1,0,0,1,0,1,0,0],
+            [0,1,0,0,1,1,0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0,0,0,0,1,0,0],
+            [0,0,0,0,0,0,0,1,1,1,0,0,0],
+            [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+    max_area = island.maxAreaOfIsland(grid)
+    print(max_area) # Output: 6
+"""
+
+######################################
+
+Processing file calculate.py, query 5
+Usage:
+	prompt_tokens: 238
+	completion_tokens: 189
+	total_tokens: 427
+
+Response:
+"""
+Class Calculate:
+This class contains methods to perform mathematical calculations on a given string.
+
+Methods:
+- update(sign, num, stack): This method updates the stack based on the sign and number provided. If the sign is '+', the number is added to the stack. If the sign is '-', the negative of the number is added to the stack. It returns the updated stack.
+- solve(i, s): This method solves the mathematical expression provided in the string 's' starting from the index 'i'. It uses a stack to keep track of the numbers and signs encountered. It returns the sum of the stack and the index of the closing bracket encountered.
+- calculate(s: str) -> int: This method takes a string 's' as input and returns the result of the mathematical expression in the string.
+
+Usage:
+calculate = Calculate()
+result = calculate.calculate("1+2-(3+4)") # result = -4
+"""
 
 ######################################
 
 Processing file english.py, query 5
 Usage:
 	prompt_tokens: 621
-	completion_tokens: 116
-	total_tokens: 737
+	completion_tokens: 92
+	total_tokens: 713
 
 Response:
 """
-This class provides a method to convert a given integer into its English word equivalent.
+This class provides a method to convert a given integer into its English word representation.
 
-Method:
--------
-numberToWords(num: int) -> str
-
-        Takes an integer 'num' as input and returns its English word equivalent as a string.
+Example usage:
+    english = English()
+    english.numberToWords(123456789) # returns 'One Hundred Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine'
 
 Args:
------
-num : int
-    Input integer to be converted.
+    num (int): The integer to be converted into its English word representation.
 
 Returns:
---------
-str:
-    English word representation of the input integer.
+    str: The English word representation of the given integer.
 
-Example:
---------
-    eng = English()
-    eng.numberToWords(123456789)
-    Output: 'One Hundred Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine'
+Raises:
+    None.
 """
 
 ######################################
@@ -1183,30 +1143,30 @@ Example:
 Processing file mycalendar.py, query 5
 Usage:
 	prompt_tokens: 197
-	completion_tokens: 453
-	total_tokens: 650
+	completion_tokens: 448
+	total_tokens: 645
 
 Response:
-Documentation comments for the Node class:
+# Documentation comments for class Node
 
 class Node:
     """
-    Represents a node in a binary search tree used to store intervals.
+    A class representing a node in a binary search tree.
 
     Attributes:
-        start (int): The start of the interval.
-        end (int): The end of the interval.
-        left (Node or None): The left child node in the binary search tree.
-        right (Node or None): The right child node in the binary search tree.
+    - start (int): The start time of the event.
+    - end (int): The end time of the event.
+    - left (Node): The left child node.
+    - right (Node): The right child node.
     """
 
     def __init__(self, start, end):
         """
         Initializes a new instance of the Node class.
 
-        Args:
-            start (int): The start of the interval.
-            end (int): The end of the interval.
+        Parameters:
+        - start (int): The start time of the event.
+        - end (int): The end time of the event.
         """
         self.start = start
         self.end = end
@@ -1215,13 +1175,13 @@ class Node:
 
     def insert(self, node):
         """
-        Inserts a new Node into the binary search tree.
+        Inserts a new node into the binary search tree.
 
-        Args:
-            node (Node): The Node to insert.
+        Parameters:
+        - node (Node): The node to be inserted.
 
         Returns:
-            bool: True if the insertion was successful, False otherwise.
+        - True if the node was successfully inserted, False otherwise.
         """
         if node.start >= self.end:
             if not self.right:
@@ -1236,14 +1196,15 @@ class Node:
         else:
             return False
 
-Documentation comments for the MyCalendar class:
+
+# Documentation comments for class MyCalendar
 
 class MyCalendar(object):
     """
-    Represents a calendar for booking intervals of time.
+    A class representing a calendar that can book events.
 
     Attributes:
-        root (Node or None): The root node of the binary search tree used to store intervals.
+    - root (Node): The root node of the binary search tree.
     """
 
     def __init__(self):
@@ -1254,14 +1215,14 @@ class MyCalendar(object):
 
     def book(self, start, end):
         """
-        Books an interval of time in the calendar.
+        Books a new event in the calendar.
 
-        Args:
-            start (int): The start of the interval.
-            end (int): The end of the interval.
+        Parameters:
+        - start (int): The start time of the event.
+        - end (int): The end time of the event.
 
         Returns:
-            bool: True if the booking was successful, False otherwise.
+        - True if the event was successfully booked, False otherwise.
         """
         if self.root is None:
             self.root = Node(start, end)
@@ -1273,53 +1234,137 @@ class MyCalendar(object):
 Processing file solution.py, query 5
 Usage:
 	prompt_tokens: 221
-	completion_tokens: 38
-	total_tokens: 259
+	completion_tokens: 481
+	total_tokens: 702
 
 Response:
 """
-ListNode class represents a singly linked list node with value and a next pointer 
-Solution class contains sortList method which takes head of a linked list as input and returns sorted linked list
+This module contains a class Solution that implements a sorting algorithm for a linked list.
+
+Classes:
+- ListNode: A class representing a node in a linked list.
+- Solution: A class implementing a sorting algorithm for a linked list.
+
+Functions:
+- sortList: A method of the Solution class that sorts a linked list.
+
+Usage:
+- Create an instance of the Solution class.
+- Call the sortList method with a linked list as an argument.
+
+Example:
+    node1 = ListNode(4)
+    node2 = ListNode(2)
+    node3 = ListNode(1)
+    node4 = ListNode(3)
+    node1.next = node2
+    node2.next = node3
+    node3.next = node4
+    solution = Solution()
+    sorted_list = solution.sortList(node1)
 """
 
+from typing import Optional
+
+class ListNode:
+    """
+    A class representing a node in a linked list.
+
+    Attributes:
+    - val: An integer representing the value of the node.
+    - next: A reference to the next node in the linked list.
+    """
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    """
+    A class implementing a sorting algorithm for a linked list.
+
+    Methods:
+    - sortList: Sorts a linked list.
+
+    """
+    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Sorts a linked list.
+
+        Args:
+        - head: A reference to the head node of the linked list.
+
+        Returns:
+        - A reference to the head node of the sorted linked list.
+        """
+        if not head or not head.next:
+            return head
+
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        mid = slow.next
+        slow.next = None
+
+        left = self.sortList(head)
+        right = self.sortList(mid)
+
+        dummy = ListNode(0)
+        curr = dummy
+        while left and right:
+            if left.val < right.val:
+                curr.next = left
+                left = left.next
+            else:
+                curr.next = right
+                right = right.next
+            curr = curr.next
+        curr.next = left or right
+
+        return dummy.next
 
 ######################################
 
 Processing file person.py, query 5
 Usage:
 	prompt_tokens: 140
-	completion_tokens: 230
-	total_tokens: 370
+	completion_tokens: 239
+	total_tokens: 379
 
 Response:
 """
 This module contains two classes: Person and Student.
 
-class Person:
-    Represents a person with a first name, a last name, and a home country.
+Person class represents a person with a first name, last name, and home country.
 
-    Attributes:
-        - firstName (str): the first name of the person
-        - lastName (str): the last name of the person
-        - homeCountry (str): the home country of the person
+Student class inherits from Person and adds a university name attribute.
 
-    Methods:
-        - printName(): prints the person's first and last name
-        - printCountry(): prints the person's home country
+Class Person:
+    __init__(self, firstName, lastName, homeCountry):
+        Initializes a new instance of the Person class.
+        Args:
+            firstName (str): The first name of the person.
+            lastName (str): The last name of the person.
+            homeCountry (str): The home country of the person.
 
-class Student(Person):
-    Represents a student with a first name, a last name, a home country, and a university name.
+    printName(self):
+        Prints the first name and last name of the person.
 
-    Attributes:
-        - firstName (str): the first name of the student
-        - lastName (str): the last name of the student
-        - homeCountry (str): the home country of the student
-        - universityName (str): the name of the student's university
+    printCountry(self):
+        Prints the home country of the person.
 
-    Methods:
-        - printName(): prints the student's first and last name
-        - printCountry(): prints the student's home country
-        - printUniversity(): prints the student's university name
+Class Student(Person):
+    __init__(self, firstName, lastName, homeCountry, universityName):
+        Initializes a new instance of the Student class.
+        Args:
+            firstName (str): The first name of the student.
+            lastName (str): The last name of the student.
+            homeCountry (str): The home country of the student.
+            universityName (str): The name of the university the student attends.
+
+    printUniversity(self):
+        Prints the name of the university the student attends.
 """
 
 ######################################
@@ -1327,92 +1372,40 @@ class Student(Person):
 Processing file proxy.py, query 5
 Usage:
 	prompt_tokens: 198
-	completion_tokens: 307
-	total_tokens: 505
+	completion_tokens: 225
+	total_tokens: 423
 
 Response:
-# Importing the ABC module and abstractmethod decorator
-from abc import ABC, abstractmethod
+"""
+The following code defines three classes: Customer, IChannel, Channel, and ProxyChannel.
 
-class Customer:
-    '''
-    Customer class with age as the private attribute.
-    '''
-    
-    def __init__(self,age):
-        '''
-        Initializes the age attribute.
-        '''
-        self.__age = age
-        
-    def get_age(self):
-        '''
-        A method to get the customer's age.
-        '''
-        return self.__age
-    
-class IChannel(ABC):
-    '''
-    Abstract Base Class for a channel.
-    '''
-    @abstractmethod
-    def provide_broadcast(self):
-        '''
-        Abstract method to provide broadcasting.
-        '''
-        
-class Channel(IChannel):
-    '''
-    A concrete class implementing the IChannel ABC.
-    '''
-    
-    def provide_broadcast(self):
-        '''
-        A method to provide broadcasting.
-        '''
-        print("Broadcast started...")
-        
-class ProxyChannel(IChannel):
-    '''
-    A class that acts as a proxy for the Channel class.
-    '''
-    
-    def __init__(self,customer: Customer):
-        '''
-        Initializes the customer and channel attributes.
-        '''
-        self.customer = customer
-        self.channel = Channel()
-        
-    def provide_broadcast(self):
-        '''
-        A method to provide broadcasting.
-        '''
-        customer_age = self.customer.get_age()
-        if customer_age > 18:
-            self.channel.provide_broadcast()
-            print("This service is registered for billing.")
-        else:
-            print("Sorry, this service is not allowed for the customers under the age of 18.")
+Class Customer:
+- __init__(self, age): Initializes a new instance of the Customer class with the given age.
+- get_age(self): Returns the age of the customer.
+
+Class IChannel(ABC):
+- @abstractmethod
+- def provide_broadcast(self): An abstract method that defines the behavior of providing a broadcast.
+
+Class Channel(IChannel):
+- provide_broadcast(self): Overrides the provide_broadcast method of the IChannel class and prints "Broadcast started..." to the console.
+
+Class ProxyChannel(IChannel):
+- __init__(self, customer: Customer): Initializes a new instance of the ProxyChannel class with the given customer.
+- provide_broadcast(self): Overrides the provide_broadcast method of the IChannel class and checks if the customer is over 18 years old. If so, it calls the provide_broadcast method of the Channel class and prints "this service is registered for billing." to the console. If not, it prints "sorry, this service is not allowed for the customers under the age of 18." to the console.
+"""
 
 ######################################
 
 Processing file room.py, query 6
 Usage:
 	prompt_tokens: 61
-	completion_tokens: 78
-	total_tokens: 139
+	completion_tokens: 33
+	total_tokens: 94
 
 Response:
 """
-This class represents a room with a calculated area based on its length and breadth.
-
-Attributes:
-    length (float): The length of the room. Default value is set to 0.0.
-    breadth (float): The breadth of the room. Default value is set to 0.0.
-
-Methods:
-    calculate_area(self): Calculates and prints the area of the room.
+This class represents a room with a length and breadth attribute. The calculate_area method calculates the area of the room by multiplying the length and breadth attributes. 
 """
 
 ######################################
@@ -1420,22 +1413,14 @@ Methods:
 Processing file fibo.py, query 6
 Usage:
 	prompt_tokens: 77
-	completion_tokens: 66
-	total_tokens: 143
+	completion_tokens: 38
+	total_tokens: 115
 
 Response:
 """
-Class Fibo contains a method fib that returns the n-th Fibonacci number.
-
-    Args:
-        n (int): The index of the desired Fibonacci number.
-
-    Returns:
-        The n-th Fibonacci number.
-
-    Example:
-        fibo = Fibo()
-        fibo.fib(6) # returns 8
+This class contains a method to calculate the nth Fibonacci number.
+:param n: an integer representing the position of the desired Fibonacci number
+:return: an integer representing the nth Fibonacci number
 """
 
 ######################################
@@ -1443,12 +1428,14 @@ Class Fibo contains a method fib that returns the n-th Fibonacci number.
 Processing file pascal.py, query 6
 Usage:
 	prompt_tokens: 132
-	completion_tokens: 67
-	total_tokens: 199
+	completion_tokens: 51
+	total_tokens: 183
 
 Response:
 """
-This class implements a method to generate the Pascal's Triangle of size n. The method takes an integer n as input and returns a 2D list of integers that represents the Pascal's Triangle of size n. Each integer in the list represents a number in the triangle. The input parameter n should be a positive integer. 
+This class generates a Pascal's triangle of size n and returns it as a list of lists of integers.
+The generate method takes an integer n as input and returns a List[List[int]].
+The algorithm uses dynamic programming to generate the triangle efficiently.
 """
 
 ######################################
@@ -1456,20 +1443,12 @@ This class implements a method to generate the Pascal's Triangle of size n. The 
 Processing file island.py, query 6
 Usage:
 	prompt_tokens: 199
-	completion_tokens: 100
-	total_tokens: 299
+	completion_tokens: 118
+	total_tokens: 317
 
 Response:
 """
-This module contains a class called Island with a method called maxAreaOfIsland. The method takes in a grid (a list of lists of ints) and returns the maximum area of an island in the grid. 
-
-The method uses dfs (depth-first search) to traverse the grid and find the maximum area of an island. 
-
-Input:
-- grid: a list of lists of ints representing the grid
-
-Output:
-- an int representing the maximum area of an island in the grid
+This file contains the implementation of the Island class which has a method maxAreaOfIsland that takes in a 2D list of integers representing a grid and returns the maximum area of an island in the grid. The method uses depth-first search (DFS) to traverse the grid and find the area of each island. The DFS function is defined within the maxAreaOfIsland method and takes in the current position (i, j) and returns the area of the island starting from that position. The method returns an integer representing the maximum area of an island in the grid.
 """
 
 ######################################
@@ -1477,34 +1456,44 @@ Output:
 Processing file calculate.py, query 6
 Usage:
 	prompt_tokens: 237
-	completion_tokens: 72
-	total_tokens: 309
+	completion_tokens: 165
+	total_tokens: 402
 
 Response:
-# This is a class to perform basic calculations on a string expression with +, -, (, and ) operators.
-# The 'update' method updates the stack with the given sign and num.
-# The 'solve' method recursively evaluates the expression using the stack for calculations.
-# The 'calculate' method takes a string expression and returns the calculated integer value.
+"""
+This class contains methods for performing arithmetic calculations on a given string input.
+
+update(self, sign, num, stack): 
+    This method updates the stack based on the sign and number provided. If the sign is "+", the number is added to the stack. If the sign is "-", the negative of the number is added to the stack. The updated stack is returned.
+
+solve(self, i, s):
+    This method solves the arithmetic expression provided in the string s starting from index i. It uses a stack to keep track of the numbers and signs encountered. It returns the sum of the stack and the index of the closing parenthesis encountered.
+
+calculate(self, s: str) -> int:
+    This method calls the solve method to calculate the arithmetic expression provided in the string s and returns the result as an integer.
+"""
 
 ######################################
 
 Processing file english.py, query 6
 Usage:
 	prompt_tokens: 620
-	completion_tokens: 145
-	total_tokens: 765
+	completion_tokens: 76
+	total_tokens: 696
 
 Response:
 """
-This class contains a method named numberToWords() which takes an integer argument 'num' and returns its corresponding English word format as a string. 
+Converts a given integer into its English word representation.
 
-The method uses dictionaries to store words for one_digit, two_digit and tens place values.
+Args:
+    num (int): The integer to be converted.
 
-There are two helper methods used - get_three_digit_num() and get_two_digit_num() to convert three digit and two digit numbers respectively to English words.
+Returns:
+    str: The English word representation of the given integer.
 
-The method first checks if the input number is 0, in which case "Zero" is returned. It then extracts the billion, million, thousand and last_three place values and converts them to English words using the helper methods.
-
-Finally, the English words for each place value are concatenated to form the final output string.
+Example:
+    english = English()
+    english.numberToWords(123456789) # returns "One Hundred Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine"
 """
 
 ######################################
@@ -1512,45 +1501,48 @@ Finally, the English words for each place value are concatenated to form the fin
 Processing file mycalendar.py, query 6
 Usage:
 	prompt_tokens: 196
-	completion_tokens: 453
-	total_tokens: 649
+	completion_tokens: 161
+	total_tokens: 357
 
 Response:
+"""
 This file contains a class Node and a class MyCalendar. The Node class represents a node in a binary search tree used to store intervals. The MyCalendar class uses the Node class to implement a calendar that can book intervals. 
+
 The Node class has an __init__ method that initializes the start and end points of the interval represented by the node, as well as the left and right child nodes. The insert method inserts a new node into the binary search tree based on the start and end points of the new node.
-The MyCalendar class has an __init__ method that initializes the root node of the binary search tree. The book method books a new interval by inserting a new node into the binary search tree using the root node. \n\nThis code is well-documented and easy to understand.
+
+The MyCalendar class has an __init__ method that initializes the root node of the binary search tree. The book method books a new interval by inserting a new node into the binary search tree using the root node. 
+
+This code is well-documented and easy to understand.
+"""
 
 ######################################
 
 Processing file solution.py, query 6
 Usage:
 	prompt_tokens: 220
-	completion_tokens: 55
-	total_tokens: 275
+	completion_tokens: 78
+	total_tokens: 298
 
 Response:
-"""
-Sorts a linked list in ascending order using the merge sort algorithm.
-
-:param head: The head node of the linked list to be sorted.
-:type head: Optional[ListNode]
-:return: The head node of the sorted linked list.
-:rtype: Optional[ListNode]
-"""
+This file contains a ListNode class and a Solution class with a sortList method that takes in a head node of type Optional[ListNode] and returns a sorted linked list. The sortList method uses the merge sort algorithm to sort the linked list. The ListNode class has two attributes, val and next, which represent the value of the node and the next node in the linked list, respectively.
 
 ######################################
 
 Processing file person.py, query 6
 Usage:
 	prompt_tokens: 139
-	completion_tokens: 182
-	total_tokens: 321
+	completion_tokens: 114
+	total_tokens: 253
 
 Response:
 """
-This file contains two classes: Person and Student. \n\nThe Person class has three attributes: firstName (string), lastName (string), and homeCountry (string). It also has two methods: printName, which prints the person's full name, and printCountry, which prints the person's home country.
+This file contains two classes: Person and Student. 
+
+The Person class has three attributes: firstName (string), lastName (string), and homeCountry (string). It also has two methods: printName, which prints the person's full name, and printCountry, which prints the person's home country.
+
 The Student class inherits from the Person class and adds an additional attribute: universityName (string). It also has a method called printUniversity, which prints the student's university name.
-Both classes have an __init__ method that initializes their respective attributes.
+
+Both classes have an __init__ method that initializes their respective attributes. 
 """
 
 ######################################
@@ -1558,14 +1550,19 @@ Both classes have an __init__ method that initializes their respective attribute
 Processing file proxy.py, query 6
 Usage:
 	prompt_tokens: 197
-	completion_tokens: 187
-	total_tokens: 384
+	completion_tokens: 172
+	total_tokens: 369
 
 Response:
 """
-This file contains three classes: Customer, IChannel, and ProxyChannel.
+This file contains three classes: Customer, IChannel, and ProxyChannel. 
+
 The Customer class has a constructor that takes an age parameter and a method get_age that returns the age of the customer.
+
 The IChannel class is an abstract base class that defines an abstract method provide_broadcast.
+
 The Channel class is a concrete implementation of the IChannel class and provides an implementation for the provide_broadcast method.
+
 The ProxyChannel class is also a concrete implementation of the IChannel class and takes a Customer object as a parameter in its constructor. It checks the age of the customer and if the customer is over 18, it provides the broadcast using the Channel object and prints a message indicating that the service is registered for billing. If the customer is under 18, it prints a message indicating that the service is not allowed for customers under the age of 18.
+
 """
