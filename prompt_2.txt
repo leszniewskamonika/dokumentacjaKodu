@@ -54,29 +54,19 @@ Usage:
 	total_tokens: 522
 
 Response:
-The documentation for the Pascal class appears to be well-written and contains important information. It includes a brief summary of the class's purpose (to generate Pascal's Triangle), a description of the input parameters (an integer n), and a clear explanation of the output (a list of lists of integers).
-
-In terms of accuracy, the comments in the code appear to match the functionality of the class, indicating that the documentation is correct. The code uses nested for-loops to generate Pascal's Triangle by filling in a two-dimensional list (dp) with appropriate values.
-
-The documentation is also complete, in that it provides all the necessary information to use the class effectively. It specifies the data types and formats of the input and output parameters and explains how the class achieves its purpose.
-
-Furthermore, the documentation is understandable. The language used is simple and concise, making it easy to follow and comprehend. The code is accompanied by comments that further clarify the purpose of each section of the code, making it easier for developers to modify or troubleshoot the code if necessary.
-
-Here's an example of how to use the Pascal class:
-
-```
+Documentation Commentary:
+The code snippet provided is a Python class named Pascal that contains a method named generate. The method takes an integer n as input and returns a list of lists of integers. The purpose of the method is to generate Pascal's triangle up to the nth row.
+The documentation quality of the code is good. The code is well-documented with clear and concise comments that explain the purpose of the code and how it works. The comments are accurate, complete, and understandable, making it easy for other developers to understand and use the code.
+The accuracy of the code is good. The code generates Pascal's triangle up to the nth row correctly. The code uses a dynamic programming approach to generate the triangle efficiently.
+The completeness of the code is good. The code handles all possible inputs correctly. The code initializes the dp list with zeros and generates the triangle using a nested loop.
+The understandability of the code is good. The code is well-structured and easy to read. The variable names are descriptive and meaningful, making it easy to understand the purpose of each variable.
+Example:
+Here is an example of how to use the Pascal class to generate Pascal's triangle up to the 5th row:
 pascal = Pascal()
-result = pascal.generate(5)
-print(result)
-```
-
-This code would create an instance of the Pascal class and use the generate method to generate Pascal's Triangle with 5 rows. The resulting list of lists would be stored in the variable "result" and printed to the console. The output would be:
-
-```
-[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-```
-
-Overall, the documentation for the Pascal class is of high quality, with accurate, complete, and understandable information that would be useful for developers looking to utilize or modify the code.
+triangle = pascal.generate(5)
+print(triangle)
+Output: [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+The output is correct and matches the expected output of Pascal's triangle up to the 5th row.
 
 ######################################
 
@@ -193,22 +183,12 @@ Usage:
 
 Response:
 Documentation Commentary:
-
-The above code defines a ListNode class and a Solution class with a sortList method. The class takes in a single argument (head) which is an Optional of ListNode type and returns an Optional of ListNode type as well.
-
-The documentation quality features for this code include accuracy, completeness, and understandability. One of the key features of this code is the clarity of variable and method names, which makes it easier for anyone to understand what the code is doing.
-
-For accuracy, the code contains comments where necessary and provides a clear explanation of how the code functions. For instance, the code defines a ListNode class with two attributes - val and next. It then proceeds to define a Solution class with a sortList method which makes use of the ListNode class.
-
-Completeness is demonstrated by the code handling different scenarios. For instance, if the head node is empty, the code returns the head node as is. If there's only one node, the code also returns the head as is. The code then proceeds to split the list into two halves and recursively sort them.
-
-Understandability is a key feature of this code, as it's well-designed for clarity. The code is easy to follow due to the well-defined variables and comments. The code is also self-explanatory, showing the purpose of each step from defining classes, methods, and parameters to the actual steps for sorting.
-
-Overall, this code is well-written and demonstrates good documentation quality features that make it easy to maintain. However, further documentation could be added for readability, especially if there are changes made to the code in the future. 
-
-Example File:
-
-The file is likely to be named sort_list.py. This file contains a Python script which defines a ListNode class, Solution class, and a sortList method. This script is used for sorting linked lists.
+The code above is a Python implementation of the Merge Sort algorithm for sorting a linked list. The code is well-documented and includes important documentation quality features such as accuracy, completeness, and understandability.
+Accuracy: The code accurately implements the Merge Sort algorithm for sorting a linked list. The algorithm is well-known and widely used, and the code follows the standard approach for implementing it.
+Completeness: The code is complete and includes all the necessary components for implementing the Merge Sort 
+algorithm. It defines a ListNode class for representing nodes in the linked list, and a Solution class for implementing the algorithm. The Solution class includes a sortList method that takes a head node as input and returns a sorted linked list.
+Understandability: The code is easy to understand and follows standard Python coding conventions. The code is well-organized and includes comments that explain the purpose of each component. The variable names are descriptive and follow standard naming conventions.
+Example: The code includes an example of how to use the sortList method. The method takes a head node as input and returns a sorted linked list. The example demonstrates how to create a linked list and call the sortList method to sort it.
 
 ######################################
 
@@ -553,29 +533,19 @@ Usage:
 	total_tokens: 1044
 
 Response:
-Documentation for Class English
-
+Documentation for class English:
+This class contains a method called \"numberToWords\" which takes an integer as input and returns the English word representation of that number. The method uses dictionaries to store the English word representation of one-digit, two-digit, and tens numbers. It also contains two helper functions called \"get_three_digit_num\" and \"get_two_digit_num\" which are used to convert three-digit and two-digit numbers to English words.
 Accuracy:
-The class English includes a function named `numberToWords` that accurately converts a given integer into its equivalent English words. The function uses dictionaries to store the English numbers for one-digit, two-digit, and tens places. It then uses a nested function `get_three_digit_num` that returns the English representation of a three-digit number. The function `get_two_digit_num` converts two-digit numbers into English representation. Lastly, the main function `numberToWords` extracts the billion, million, thousand, and last three digits of the input and uses the nested functions to convert each of these parts into its English representation.
-
+The method accurately converts the input integer to its English word representation. It uses the correct English words for each digit and handles special cases such as numbers between 10 and 19.
 Completeness:
-The code provided for the class English is a complete implementation of the function `numberToWords`. It handles all possible edge cases such as 0, negative numbers, and input greater than 2^31-1. It also covers all possible outputs up to billions and provides the English representation for all integer values within its range.
-
+The method handles all possible input integers, including zero and negative numbers.It also handles numbers up to billions.
 Understandability:
-The code for the class English is easy to understand and follow. It uses descriptive variable names and includes comments where necessary. The function `numberToWords` is well-structured with nested functions that break down the problem into simpler sub-problems. Additionally, the function uses straightforward English words that are easily understood by anyone who reads the code.
-
+The method is well-organized and easy to understand. The dictionaries used to store the English word representation of numbers are clearly labeled and the helper functions are named appropriately. The code is also well-commented, making it easy to follow the logic.
 Example:
-To use the `numberToWords` function, you need to create an instance of the class English and call the function with an integer argument. Once invoked, the function will return the English representation of the given input integer. Below is an example of using this function:
-
-```python
-# Create an instance of the class English
-eng = English()
-
-# Call the function and pass an integer argument
-print(eng.numberToWords(123456789))
-# Output: "One Hundred Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine"
-```
-In the above example, the function takes the integer 123456789 as input and returns its corresponding English words.
+Here is an example of how to use the \"numberToWords\" method:
+english = English()
+print(english.numberToWords(123456789))
+Output: One Hundred Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine
 
 ######################################
 
@@ -693,44 +663,24 @@ Usage:
 	total_tokens: 413
 
 Response:
-Documentation for the class Person:
-
-Class Name:
-Person
-
-Description:
-The Person class is used to create an object that represents a person. It includes attributes such as first name, last name, and home country.
-
-Constructor:
-__init__(self, firstName, lastName, homeCountry)
-
-Parameters:
-- firstName (string): The first name of the person.
-- lastName (string): The last name of the person.
-- homeCountry (string): The home country of the person.
-
-Methods:
-- printName(self): This method prints the first and last names of the person.
-- printCountry(self): This method prints the home country of the person.
-
-Documentation Quality Features:
-1. Accuracy: The documentation accurately describes the attributes, constructor, and methods of the Person class.
-2. Completeness: The documentation covers all important aspects of the Person class, including its attributes, constructor, and methods.
-3. Understandability: The documentation is written in clear and concise language, which makes it easy to understand.
-
+Documentation for the Person and Student Classes
+Accuracy:
+The documentation accurately describes the purpose and functionality of the Person and Student classes. The code is written in a way that accurately reflects the intended behavior of the classes.
+Completeness:
+The documentation provides a complete description of the Person and Student classes, including all methods and attributes.The code includes all necessary components to create and use instances of the classes.
+Understandability:
+The documentation is written in clear and concise language, making it easy to understand for developers who are familiar with Python. The code is also written in a way that is easy to read and understand.
 Example:
-# Create an instance of the Person class
-person1 = Person("John", "Doe", "USA")
-
-# Print the person's name
-person1.printName()
-
-# Output: John Doe
-
-# Print the person's home country
-person1.printCountry()
-
-# Output: USA
+Here is an example of how to use the Student class:
+# Create a new student instance
+new_student = Student(\"John\", \"Doe\", \"USA\", \"Harvard University\")
+# Print the student's name and university
+new_student.printName()
+new_student.printUniversity() 
+# Output: 
+# John Doe 
+# Harvard University
+In this example, we create a new instance of the Student class and pass in the student's first name, last name, home country, and university name. We then call the printName() and printUniversity() methods to print out the student's name and university. The output shows that the code is working correctly and the documentation accurately  describes the behavior of the Student class.
 
 ######################################
 
@@ -792,20 +742,15 @@ Usage:
 
 Response:
 Documentation Commentary:
-
-The class "Room" has been defined in the above code. It includes two instance variables, "length" and "breadth", both initialized to 0.0. The class has a single method called "calculate_area(self)", which calculates the area of the room.
-
-To calculate the area, the method multiplies the length and breadth of the room and prints the result. Here is an example of how to use this class:
-
-Example:
-room1 = Room()          # creates an instance of the Room class
-room1.length = 10.0     # sets the length of the room to 10.0
-room1.breadth = 12.0    # sets the breadth of the room to 12.0
-room1.calculate_area()  # prints "Area of Room = 120.0"
-
-In the example above, we create an instance of the "Room" class and set its length and breadth to 10.0 and 12.0 respectively. Then we call the "calculate_area" method, which prints the area of the room as 120.0.
-
-Overall, the class "Room" provides a simple and straightforward way to calculate the area of a room given its length and breadth.
+The class Room is defined with two attributes, length and breadth, both initialized to 0.0. The class also has a method called calculate_area, which calculates the area of the room by multiplying the length and breadth attributes and printing the result to the console.\n\nExample usage:
+To use the Room class, first create an instance of the class:
+room1 = Room()
+Then, set the length and breadth attributes to the desired values:
+room1.length = 10.0
+room1.breadth = 5.0
+Finally, call the calculate_area method to calculate and print the area of the room:
+room1.calculate_area()
+This will output \"Area of Room = 50.0\" to the console
 
 ######################################
 
@@ -816,20 +761,12 @@ Usage:
 	total_tokens: 293
 
 Response:
-The class Fibo is a simple implementation of the Fibonacci sequence. The class has a single method, fib, which takes an integer n as input and returns the nth Fibonacci number. 
-
-The method begins by checking if the input n is equal to 0 or 1. If n is 0, it returns 0 and if it is 1, it returns 1. If n is neither 0 nor 1, the method recursively calls itself twice�once with n-1 and once with n-2�and returns the sum of the results.
-
-This implementation is both accurate and complete, as it correctly calculates the nth Fibonacci number for any given positive integer. The method is also easy to understand, as the recursive implementation follows the standard formula for the Fibonacci sequence. 
-
+Documentation Commentary:
+The class Fibo contains a method called fib that takes an integer n as input and returns an integer. This method calculates the nth number in the Fibonacci sequence recursively.The input parameter n must be an integer. If n is equal to 0, the method returns 0. If n is equal to 1, the method returns 1. Otherwise, the method recursively calls itself with n-1 and n-2 as inputs and returns the sum of the two results.This implementation of the Fibonacci sequence is a classic example of recursion in computer science. It is important to note that this method may not be efficient for large values of n due to the exponential growth of the recursive calls. 
 Example usage:
-
-```
 f = Fibo()
-
-print(f.fib(0)) # Output: 0
-print(f.fib(1)) # Output: 1
-print(f.fib(10)) # Output: 55
+print(f.fib(5)) # Output: 5
+In this example, we create an instance of the Fibo class and call the fib method with an input of 5. The method returns the 5th number in the Fibonacci sequence, which is 5
 ```
 
 ######################################
@@ -1038,31 +975,17 @@ Usage:
 	total_tokens: 534
 
 Response:
-The provided code implements a system for broadcasting channels to customers. The system is comprised of three classes: Customer, IChannel, and Channel. The Customer class takes an age parameter upon initialization and provides a get_age method to retrieve the age value.
-
-The IChannel class is an abstract class that defines a single abstract method, provide_broadcast. The Channel class is a concrete implementation of IChannel and overrides provide_broadcast with a print statement indicating that the broadcast has started.
-
-The ProxyChannel class is also a concrete implementation of IChannel, but it acts as a proxy for Channel. Upon initialization, it takes a Customer object and the Channel class is also instantiated within the ProxyChannel. The provide_broadcast method of ProxyChannel checks the age of the embedded Customer object and only allows broadcast if the age is above 18, providing a billing statement as well. If the age is below 18, the broadcast request will be denied.
-
-An example of how to use these classes would be:
-
-# Initialize a Customer object
-customer1 = Customer(23)
-
-# Create a ProxyChannel object with the Customer object
-proxy_channel1 = ProxyChannel(customer1)
-
-# Attempt to provide broadcast
-proxy_channel1.provide_broadcast() # Output: Broadcast started...this service is registered for billing. 
-
-# Initialize another Customer object with age under 18
-customer2 = Customer(16)
-
-# Create another ProxyChannel object with the under-18 Customer object
-proxy_channel2 = ProxyChannel(customer2)
-
-# Attempt to provide broadcast
-proxy_channel2.provide_broadcast() # Output: sorry, this service is not allowed for the customers under the age of 18.
+The given code defines three classes: Customer, IChannel, and ProxyChannel. Customer class has a constructor that initializes the age of the customer and a method get_age() that returns the age of the customer. IChannel is an abstract base class that defines an abstract method provide_broadcast(). Channel class inherits from IChannel and implements the provide_broadcast() method that prints \"Broadcast started...\". ProxyChannel also inherits from IChannel and has a constructor that takes a Customer object as an argument. It also has a provide_broadcast() method that checks the age of the customer and if the age is greater than 18, it calls the provide_broadcast() method of the Channel object and prints \"this service is registered for billing.\" Otherwise, it prints \"sorry, this service is not allowed for the customers under the age of 18.\"
+An example usage of these classes could be:
+# create a customer object with age 20\ncustomer = Customer(20)
+# create a proxy channel object with the customer object
+proxy_channel = ProxyChannel(customer)
+# call the provide_broadcast() method of the proxy channel object
+proxy_channel.provide_broadcast()
+# Output:
+# Broadcast started...
+# this service is registered for billing.
+In this example, we create a Customer object with age 20 and a ProxyChannel object with the Customer object. We then call the provide_broadcast() method of the ProxyChannel object, which checks the age of the customer and calls the provide_broadcast() method of the Channel object if the age is greater than 18. The output shows that the broadcast started and the service is registered for billing.
 
 ######################################
 
@@ -1115,51 +1038,18 @@ Usage:
 	total_tokens: 452
 
 Response:
-CLASS: Fibo
-
-DESCRIPTION:
-The Fibo class implements the Fibonacci sequence in Python. Given an integer "n", the "fib" method of the class returns the nth element of the Fibonacci sequence.
-
-USAGE:
-To use this class, follow the steps below:
-
-1. Create an instance of the Fibo class: `fib = Fibo()`
-2. Call the "fib" method of the instance with an integer "n" as input: `result = fib.fib(n)`
-
-Here is an example:
-
-```
-fib = Fibo()
-result = fib.fib(5)
+Class Fibo:
+The Fibo class is a Python class that contains a method called fib. The purpose of the fib method is to calculate the nth number in the Fibonacci sequence.
+Method Signature:The method signature for the fib method is as follows:
+def fib(self, n: int) -> int: The method takes in one parameter, n, which is an integer that represents the position of the number in the Fibonacci sequence that we want to calculate. The method returns an integer, which is the value of the nth number in the Fibonacci sequence.
+Method Description:The fib method uses recursion to calculate the nth number in the Fibonacci sequence. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding numbers. The first two numbers in the sequence are 0 and 1. The method first checks if n is equal to 0 or 1. If n is 0, the method returns 0. If n is 1, the method returns 1. These are the base cases for the recursion.If n is not 0 or 1, the method calls itself recursively with n-1 and n-2 as arguments. The method then adds the results of these two recursive calls and returns the sum.
+Example:
+Here is an example of how to use the Fibo class to calculate the 10th number in the Fibonacci sequence:
+f = Fibo()
+result = f.fib(10)
 print(result)
-
-OUTPUT:
-5
-```
-
-EXPLANATION:
-In the example above, an instance of the Fibo class is created and stored in the "fib" variable. The "fib" method of this instance is then called with the input "5". This returns the 5th element of the Fibonacci sequence, which is 5.
-
-METHOD:
-```
-def fib(self, n: int) -> int:
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    return self.fib(n-1)+self.fib(n-2)
-```
-
-PARAMETERS:
-- "n": an integer that represents the desired element of the Fibonacci sequence to return.
-
-RETURN VALUE:
-- The nth element of the Fibonacci sequence.
-
-NOTES:
-- This method uses recursion to calculate the nth element of the Fibonacci sequence.
-- The method returns 0 if "n" is 0 and 1 if "n" is 1, to handle the base cases.
-- For "n" greater than 1, the method returns the sum of the (n-1)th and (n-2)nd elements of the Fibonacci sequence, which is calculated recursively.
+Output: 55
+In this example, we create an instance of the Fibo class and call the fib method with an argument of 10. The method returns the 10th number in the Fibonacci sequence, which is 55. We then print the result to the console.
 
 ######################################
 
@@ -1252,45 +1142,19 @@ Usage:
 	total_tokens: 622
 
 Response:
-Calculate Class Documentation:
-
-Description:
-The Calculate class defines a method named "calculate" that takes in a string "s" and returns the sum of the expression described in the string. The expression can contain numbers, addition, subtraction, and parentheses.
-
-Attributes:
-There are no attributes defined in the Calculate class.
-
-Methods:
-1. update(self, sign, num, stack):
-    Description: This method updates the stack by appending a number to it if the sign is "+" and appending a negative number to it if the sign is "-".
-    Arguments:
-        - sign: A string representing the current sign used in the expression.
-        - num: An integer representing the current number being processed in the expression.
-        - stack: A list representing the current stack of numbers in the expression.
-    Returns: The updated stack after appending the appropriate number.
-
-2. solve(self, i, s):
-    Description: This is a recursive method that solves the expression and returns the final sum. It processes the string character by character and updates the stack accordingly. It also handles parentheses by calling itself recursively.
-    Arguments:
-        - i: An integer representing the current index being processed in the string.
-        - s: A string representing the expression to be solved.
-    Returns: The final sum of the expression and the index of the closing parenthesis.
-
-3. calculate(self, s: str) -> int:
-    Description: This method calls the solve method and passes in the string expression to be solved.
-    Arguments:
-        - s: A string representing the expression to be solved.
-    Returns: An integer representing the final sum of the expression.
-
-Example Usage:
-# Create a Calculate object
+Class Calculate:
+The Calculate class contains three methods: update, solve, and calculate. The purpose of this class is to perform basic arithmetic operations on a given string input.
+Method 1: update(sign, num, stack)
+This method takes in three parameters: sign, num, and stack. The sign parameter represents the arithmetic operator (+ or -), the num parameter represents the number to be added or subtracted, and the stack parameter represents the list of numbers to be operated on.If the sign parameter is \"+\", the num parameter is appended to the stack. If the sign parameter is \"-\", the negative of the num parameter is appended to the stack. The updated stack is then returned.
+Method 2: solve(i, s)
+This method takes in two parameters: i and s. The i parameter represents the starting index of the string to be operated on, and the s parameter represents the string to be operated on.The method initializes three variables: stack, num, and sign. The stack variable represents the list of numbers to be operated on, the num variable represents the current number being parsed from the string, and the sign variable represents the current arithmetic operator.The method then iterates through the string starting from the i index. If the current character is a digit, the num variable is updated accordingly. If the current character is an arithmetic operator, the update method is called with the current sign, num, and stack parameters. The num variable is then reset to 0, and the sign variable is updated to the current character.If the current character is an opening parenthesis, the solve method is recursively called with the index incremented by 1. The returned sum and index are then used to update the num variable and the i variable, respectively.If the current character is a closing parenthesis, the update method is called with the current sign, num, and stack parameters. The sum of the stack is then returned along with the updated index.The method continues to iterate through the string until the end is reached. The update method is then called with the current sign, num, and stack parameters, and the sum of the stack is returned.
+Method 3: calculate(s)
+This method takes in one parameter: s. The s parameter represents the string to be operated on.The method simply calls the solve method with the starting index of 0 and the input string s. The sum of the stack is then returned as an integer.
+Example:
 c = Calculate()
-
-# Call the calculate method with a string expression
-result = c.calculate("(1+(4+5+2)-3)+(6+8)")
-
-# The result should be 23
-print(result)
+print(c.calculate(\"1+2-(3+4)\"))
+# Output: -4
+In this example, the Calculate class is instantiated as c. The calculate method is then called with the input string \"1+2-(3+4)\". The output is -4, which is the correct result of the arithmetic operation.
 
 ######################################
 
@@ -1387,45 +1251,25 @@ Usage:
 	total_tokens: 642
 
 Response:
-Documentation for the given code:
-
-The above code defines a class `ListNode` that represents a singly-linked list node with a value (`val`) and a reference to the next node (`next`). The class `Solution` has a method `sortList` that sorts the given linked list in ascending order and returns the sorted list.
-
-`head` is the head of the linked list, and is an instance of the `ListNode` class. The `Optional` type hinting for `head` indicates that the parameter is optional and can be `None` as well.
-
-The `sortList` method first checks if the given linked list is empty or has only one node, in which case it is already sorted, and returns the `head` as is.
-
-Otherwise, it finds the middle of the linked list using the "slow-fast" pointer technique, and splits the linked list into two parts, left and right, with the `slow` pointer as the end of the left part, and the `mid` pointer as the start of the right part.
-
-It then recursively calls the `sortList` method on both parts, and merges the two sorted linked lists using a dummy node and two pointer variables - `curr` to point to the last node of the merged list, and `left` and `right` to point to the next node to be added from the left and right parts respectively.
-
-The merged sorted linked list is then returned.
-
-Example usage:
-
-```
-# create a linked list with values 4 -> 2 -> 1 -> 3
-a = ListNode(4)
-b = ListNode(2)
-c = ListNode(1)
-d = ListNode(3)
-a.next = b
-b.next = c
-c.next = d
-
-# create an instance of Solution class
+Documentation:
+The above code defines a class ListNode which has two attributes - val and next. The class Solution has a method sortList which takes a ListNode object as input and returns a sorted ListNode object.
+The method first checks if the input ListNode object is empty or has only one element. If so, it returns the same object as it is already sorted.If the input object has more than one element, the method uses the merge sort algorithm to sort the elements. It first finds the middle element of the list using two pointers - slow and fast. The slow pointer moves one step at a time while the fast pointer moves two steps at a time. When the fast pointer reaches the end of the list, the slow pointer points to the middle element.
+The method then splits the list into two halves - left and right - using the middle element. It recursively calls the sortList method on both halves to sort them.Finally, the method merges the two sorted halves using a dummy node and a current node. It compares the values of the first elements of both halves and adds the smaller one to the current node. It then moves the current node to the next position and repeats the process until one of the halves becomes empty. It then adds the remaining elements of the other half to the current node.The sorted list is returned by the method.
+Example:
+# create a linked list with unsorted elements
+head = ListNode(4)
+head.next = ListNode(2)
+head.next.next = ListNode(1)
+head.next.next.next = ListNode(3)
+# create an object of the Solution class
 s = Solution()
-
-# sort the linked list
-sorted_list = s.sortList(a)
-
-# print the sorted list values
-while sorted_list:
-    print(sorted_list.val)
-    sorted_list = sorted_list.next
-
-# Output: 1 2 3 4
-```
+# call the sortList method on the linked list
+sorted_head = s.sortList(head)
+# print the sorted linked list
+while sorted_head:
+print(sorted_head.val, end=\" \")
+sorted_head = sorted_head.next
+Output: 1 2 3 4
 
 ######################################
 
